@@ -20848,6 +20848,10 @@
 
 	var _Connect2 = _interopRequireDefault(_Connect);
 
+	var _Resume = __webpack_require__(183);
+
+	var _Resume2 = _interopRequireDefault(_Resume);
+
 	var _ContactFormContainer = __webpack_require__(180);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
@@ -20859,6 +20863,7 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(_Home2.default, null),
+	    _react2.default.createElement(_Resume2.default, null),
 	    _react2.default.createElement(_Connect2.default, null),
 	    _react2.default.createElement(_ContactFormContainer2.default, null)
 	  );
@@ -21269,6 +21274,50 @@
 	};
 
 	exports.default = BodyField;
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Resume = function Resume(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'resume-container' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'resume-section' },
+	      _react2.default.createElement('div', { className: 'resume-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Resume'
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
+	    )
+	  );
+	};
+
+	exports.default = Resume;
 
 /***/ }
 /******/ ]);
