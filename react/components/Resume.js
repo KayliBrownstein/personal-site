@@ -3,7 +3,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 
 const Resume = props => {
   return(
-    <div className="resume-container">
+    <div className="resume-container small-12 large-12 columns">
       <ScrollableAnchor id={'resume-section'}>
         <div className="resume-anchor">
         </div>

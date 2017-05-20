@@ -20964,10 +20964,10 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project-container small-12 large-10 large-centered columns' },
+	        { className: 'project-container small-12 large-12 columns' },
 	        _react2.default.createElement(
 	          _reactScrollableAnchor2.default,
-	          { id: 'projects-section-section' },
+	          { id: 'projects-section' },
 	          _react2.default.createElement('div', { className: 'projects-anchor' })
 	        ),
 	        _react2.default.createElement(
@@ -20977,15 +20977,31 @@
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
 	          imageLink: 'public/SYW_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
 	          id: '1',
 	          siteLink: 'https://seeyouwhen.herokuapp.com',
 	          header: 'SeeYouWhen'
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
 	          imageLink: 'public/Appful_screenshot.png',
+	          githubLink: 'https://github.com/emlanctot/appful',
 	          id: '2',
 	          siteLink: 'https://appful.herokuapp.com',
 	          header: 'Appful'
+	        }),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          imageLink: 'public/gifSearch_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/giphy-search',
+	          id: '3',
+	          siteLink: 'http://gif-search-app.herokuapp.com',
+	          header: 'GIF Search'
+	        }),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          imageLink: 'public/farmalarm_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
+	          id: '4',
+	          siteLink: 'http://farmalarm.herokuapp.com',
+	          header: 'Farm Alarm'
 	        })
 	      );
 	    }
@@ -21010,10 +21026,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Home = __webpack_require__(178);
-
-	var _Home2 = _interopRequireDefault(_Home);
-
 	var _reactScrollableAnchor = __webpack_require__(170);
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
@@ -21023,20 +21035,38 @@
 	var ProjectTile = function ProjectTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'small-12 large-6 columns' },
+	    { className: 'small-12 large-6 columns project-tile' },
 	    _react2.default.createElement(
-	      'h1',
+	      'h2',
+	      null,
+	      props.header
+	    ),
+	    _react2.default.createElement(
+	      'center',
 	      null,
 	      _react2.default.createElement(
-	        'a',
-	        { href: props.siteLink },
-	        props.header
+	        'div',
+	        { id: 'icons' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: props.githubLink, target: '_blank' },
+	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: props.siteLink, target: '_blank' },
+	          _react2.default.createElement('img', { src: 'http://www.iconsdb.com/icons/preview/icon-sets/web-2-blue/link-xxl.png', id: 'heroku-project' })
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
 	      { id: 'project-image' },
-	      _react2.default.createElement('img', { src: 'props.imageLink' })
+	      _react2.default.createElement(
+	        'center',
+	        null,
+	        _react2.default.createElement('img', { src: 'props.imageLink' })
+	      )
 	    )
 	  );
 	};
@@ -21066,7 +21096,7 @@
 	var Resume = function Resume(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'resume-container' },
+	    { className: 'resume-container small-12 large-12 columns' },
 	    _react2.default.createElement(
 	      _reactScrollableAnchor2.default,
 	      { id: 'resume-section' },

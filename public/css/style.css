@@ -92,6 +92,32 @@
   background-color: #FF9D2E;
 }
 
+/*PROJECTS CONTAINER*/
+
+.project-container {
+  background-color: #A3A948;
+  padding-bottom: 5%;
+}
+
+#project-image {
+  margin-bottom: 5%;
+}
+
+.project-tile {
+  background-color: #A3A948;
+}
+
+h2 {
+  text-align: center;
+}
+
+#github-project, #heroku-project {
+  width: 10%;
+  height: 10%;
+  padding: 5px;
+}
+
+
 @media only screen and (max-width: 640px) {
 
   .contact-container .button {
