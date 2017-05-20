@@ -20844,13 +20844,17 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Connect = __webpack_require__(179);
+	var _ProjectsContainer = __webpack_require__(184);
 
-	var _Connect2 = _interopRequireDefault(_Connect);
+	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
 	var _Resume = __webpack_require__(180);
 
 	var _Resume2 = _interopRequireDefault(_Resume);
+
+	var _Connect = __webpack_require__(179);
+
+	var _Connect2 = _interopRequireDefault(_Connect);
 
 	var _ContactFormContainer = __webpack_require__(181);
 
@@ -20863,6 +20867,7 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(_Home2.default, null),
+	    _react2.default.createElement(_ProjectsContainer2.default, null),
 	    _react2.default.createElement(_Resume2.default, null),
 	    _react2.default.createElement(_Connect2.default, null),
 	    _react2.default.createElement(_ContactFormContainer2.default, null)
@@ -21318,6 +21323,132 @@
 	};
 
 	exports.default = BodyField;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	var _ProjectTile = __webpack_require__(185);
+
+	var _ProjectTile2 = _interopRequireDefault(_ProjectTile);
+
+	var _SYW_screenshot = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../public/SYW_screenshot\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _SYW_screenshot2 = _interopRequireDefault(_SYW_screenshot);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProjectsContainer = function (_Component) {
+	  _inherits(ProjectsContainer, _Component);
+
+	  function ProjectsContainer(props) {
+	    _classCallCheck(this, ProjectsContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectsContainer.__proto__ || Object.getPrototypeOf(ProjectsContainer)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(ProjectsContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'project-container small-12 large-10 large-centered columns' },
+	        _react2.default.createElement(
+	          _reactScrollableAnchor2.default,
+	          { id: 'projects-section-section' },
+	          _react2.default.createElement('div', { className: 'projects-anchor' })
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Projects'
+	        ),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          imageLink: 'public/SYW_screenshot.png',
+	          id: '1',
+	          siteLink: 'https://seeyouwhen.herokuapp.com',
+	          header: 'SeeYouWhen'
+	        })
+	      );
+	    }
+	  }]);
+
+	  return ProjectsContainer;
+	}(_react.Component);
+
+	exports.default = ProjectsContainer;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Home = __webpack_require__(178);
+
+	var _Home2 = _interopRequireDefault(_Home);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProjectTile = function ProjectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.siteLink },
+	        props.header
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'project-image' },
+	      _react2.default.createElement('img', { src: 'props.imageLink' })
+	    )
+	  );
+	};
+
+	exports.default = ProjectTile;
 
 /***/ }
 /******/ ]);
