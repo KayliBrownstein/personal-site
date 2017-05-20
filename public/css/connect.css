@@ -1,0 +1,41 @@
+.connect-container {
+  /*background-color: #BDEECD;*/
+}
+
+#github-connect-image {
+  float: left;
+  margin-left: 15%;
+  /*background-color: #BDEECD;*/
+}
+
+#linkedin-connect-image {
+  float: right;
+  margin-right: 15%;
+  /*background-color: #BDEECD;*/
+}
+
+/*#github-connect {
+  background-color: #BDEECD;
+}
+
+#linked-connect {
+  background-color: #BDEECD;
+}*/
+
+#connect-icons {
+  margin: 5%;
+  /*background-color: #BDEECD;*/
+}
+
+img {
+  height: 30%;
+  width: 30%;
+  /*background-color: #BDEECD;*/
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  margin: 30px;
+}
