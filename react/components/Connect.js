@@ -1,14 +1,19 @@
 import React from 'react';
 import Home from './Home';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const Connect = props => {
   return(
-    <div>
-    <h1>Connect With Me</h1>
-      <ul>
-        <li id="github-connect"><a href="https://github.com/kaylibrownstein" target="_blank">Github</a></li>
-        <li id="linkedin-connect"><a href="https://linkedin.com/in/kaylibrownstein" target="_blank">LinkedIn</a></li>
-      </ul>
+    <div className="connect-container column">
+      <ScrollableAnchor id={'connect-section'}>
+        <div className="connect-anchor">
+        </div>
+      </ScrollableAnchor>
+      <h1>Connect With Me</h1>
+      <div id="connect-icons">
+        <p id="github-connect"><a href="https://github.com/kaylibrownstein" target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" id="github-connect-image" className="small-12 large-5 columns"/></a></p>
+        <p id="linkedin-connect"><a href="https://linkedin.com/in/kaylibrownstein" target="_blank"><img src="https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png" id="linkedin-connect-image" className="small-12 large-5 columns"/></a></p>
+      </div>
     </div>
   )
 }

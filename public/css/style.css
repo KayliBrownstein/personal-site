@@ -1,0 +1,85 @@
+/*NAV CONTAINER*/
+
+.navbar {
+  margin: 3%;
+}
+.navbar .links {
+  margin-left: 2%;
+  text-align: center;
+}
+.navbar .links li {
+  display: inline;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+.navbar .links li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Lato';
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.navbar .links li a:hover {
+  color: #008080;
+}
+
+/*CONNECT CONTAINER*/
+
+.connect-container {
+  background-color: #93CCC6;
+}
+
+#github-connect-image {
+  float: left;
+  margin-bottom: 5%;
+}
+
+#linkedin-connect-image {
+  float: right;
+  margin-bottom: 5%;
+}
+
+#connect-icons {
+  /*margin: 5%;*/
+}
+
+.connect-container h1, .contact-container h1 {
+  color: black;
+  text-align: center;
+  padding: 5%;
+  text-transform: uppercase;
+  font-family: Times;
+}
+
+/*CONTACT CONTAINER*/
+
+.contact-container .button {
+  background-color: white;
+  border: solid black 1px;
+  color: black;
+  width: 30%;
+}
+
+.contact-container {
+  margin-bottom: 5%;
+}
+
+.contact-container .email-field {
+  background-color: #E8E8E8;
+}
+
+/*HOME CONTAINER */
+
+.home-container p {
+  color: black;
+  margin: 10%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+
+  .contact-container .button {
+    width: 100%;
+  }
+}
