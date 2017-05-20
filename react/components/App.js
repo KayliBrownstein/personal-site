@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
+import Body from './Body';
 
 class App extends Component {
   constructor(props){
@@ -10,7 +12,10 @@ class App extends Component {
 
   render() {
     return(
-      <h1>BOILERPLATE !</h1>
+      <div>
+        <Navbar />
+        <Body />
+      </div>
     )
   }
 }
