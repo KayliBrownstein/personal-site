@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import ProjectTile from '../components/ProjectTile';
-import SYW_screenshot from '../public/SYW_screenshot';
 
 class ProjectsContainer extends Component {
   constructor(props){
@@ -24,6 +23,12 @@ class ProjectsContainer extends Component {
             id='1'
             siteLink='https://seeyouwhen.herokuapp.com'
             header="SeeYouWhen"
+            />
+          <ProjectTile
+            imageLink='public/Appful_screenshot.png'
+            id='2'
+            siteLink='https://appful.herokuapp.com'
+            header="Appful"
             />
       </div>
 
