@@ -99,7 +99,7 @@
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: #77AB59;
+  background-color: #329996;
   padding-bottom: 5%;
 }
 
@@ -111,13 +111,13 @@
 }
 
 .project-tile {
-  background-color: #77AB59;
+  background-color: #909A92;
   /*margin-bottom: 5%;*/
-  border: solid white 2px;
+  /*border: solid white 2px;*/
 }
 
 .project-tile h2 {
-  text-align: center;
+  /*text-align: center;*/
   padding-top: 20px;
   /*padding-bottom: 3px;*/
   font-family: 'Amatic SC', cursive;
@@ -125,6 +125,7 @@
   /*line-height: 1.8;*/
   color: #FCF8F9;
   text-transform: uppercase;
+  /*position: relative;*/
   font-weight: bold;
   letter-spacing: 0.1em;
   text-shadow: -1.5px -1.5px 0px black;
@@ -138,11 +139,10 @@
 }
 
 #font-awesome-icon {
-  font-size: 320%;
-  padding: 5px;
-  padding-bottom: 0;
-  margin-top: 10px;
+  font-size: 340%;
   display: inline;
+  float: right;
+  position: absolute;
 }
 
 #project-image:hover .rollover {
@@ -186,21 +186,32 @@
 	overflow:hidden;
 }
 
-.hoverinfo {
-  position: absolute;
+#hoverinfo {
   top: 15px;
   left: 15px;
-  font-size: 28px;
+  font-size: 90%;
   color: #ffffff;
+  padding: 5px;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+}
+#hoverinfo p {
   cursor: pointer;
-}
-.hoverinfo p {
   display: none;
-  color: #000000;
 }
-.hoverinfo:hover p {
-  background-color: rgba(255, 255, 255, 0.7);
+#hoverinfo:hover p {
+  cursor: pointer;
+  color: #000000;
+  background-color: white;
   display: block;
+  border-radius: 5px;
+  left: 5%;
+  padding: 5px 15px;
+  position: relative;
+  display: inline;
+  width: 100px;
+  z-index: 98;
+  font-size: 8px;
 }
 
 @media only screen and (max-width: 640px) {

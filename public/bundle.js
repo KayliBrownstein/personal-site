@@ -21450,34 +21450,32 @@
 	    'div',
 	    { className: 'small-12 medium-6 large-6 columns project-tile' },
 	    _react2.default.createElement(
-	      'h2',
-	      null,
-	      props.header
-	    ),
-	    _react2.default.createElement(
 	      'center',
 	      null,
 	      _react2.default.createElement(
 	        'div',
-	        { id: 'icons', className: 'column row' },
+	        null,
 	        _react2.default.createElement(
-	          'a',
-	          { href: props.githubLink, target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
-	        ),
-	        _react2.default.createElement(
-	          'a',
-	          { href: props.siteLink, target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'font-awesome-icon hoverinfo' },
-	          props.collabIcon,
+	          'span',
+	          null,
 	          _react2.default.createElement(
-	            'p',
+	            'h2',
 	            null,
-	            props.hoverinfo
+	            props.header
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'font-awesome-icon' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'hoverinfo' },
+	              props.collabIcon,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.hover
+	              )
+	            )
 	          )
 	        )
 	      )
@@ -21510,6 +21508,20 @@
 	            )
 	          )
 	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'icons', className: 'column row' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.githubLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.siteLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
 	      )
 	    )
 	  );
