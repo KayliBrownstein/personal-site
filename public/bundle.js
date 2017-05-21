@@ -20964,7 +20964,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project-container small-12 large-12 columns' },
+	        { className: 'project-container small-12 medium-12 large-12 columns' },
 	        _react2.default.createElement(
 	          _reactScrollableAnchor2.default,
 	          { id: 'projects-section' },
@@ -20976,7 +20976,8 @@
 	          'Projects'
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          collabIcon: '<i className="fa fa-user" aria-hidden="true"></i>',
+	          hover: 'Solo contributor',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
 	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
 	          id: '1',
@@ -20985,7 +20986,8 @@
 	          content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          collabIcon: '<i className="fa fa-users" aria-hidden="true"></i>',
+	          hover: 'Multiple contributors',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
 	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
 	          githubLink: 'https://github.com/emlanctot/appful',
 	          id: '2',
@@ -20994,7 +20996,8 @@
 	          content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          collabIcon: '<i class="fa fa-user" aria-hidden="true"></i>',
+	          hover: 'Solo contributor',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
 	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/giphy-search',
 	          id: '3',
@@ -21003,7 +21006,8 @@
 	          content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          collabIcon: '<i className="fa fa-users" aria-hidden="true"></i>',
+	          hover: 'Multiple contributors',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
 	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
 	          id: '4',
@@ -21106,22 +21110,14 @@
 	      'div',
 	      { id: 'connect-icons' },
 	      _react2.default.createElement(
-	        'p',
-	        { id: 'github-connect' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-connect-image', className: 'small-12 large-5 columns' })
-	        )
+	        'a',
+	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      ),
 	      _react2.default.createElement(
-	        'p',
-	        { id: 'linkedin-connect' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png', id: 'linkedin-connect-image', className: 'small-12 large-5 columns' })
-	        )
+	        'a',
+	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      )
 	    )
 	  );
@@ -21452,7 +21448,7 @@
 	var ProjectTile = function ProjectTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'small-12 large-6 columns project-tile' },
+	    { className: 'small-12 medium-6 large-6 columns project-tile' },
 	    _react2.default.createElement(
 	      'h2',
 	      null,
@@ -21463,7 +21459,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'div',
-	        { id: 'icons' },
+	        { id: 'icons', className: 'column row' },
 	        _react2.default.createElement(
 	          'a',
 	          { href: props.githubLink, target: '_blank' },
@@ -21474,7 +21470,16 @@
 	          { href: props.siteLink, target: '_blank' },
 	          _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
 	        ),
-	        props.collabIcon
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'font-awesome-icon hoverinfo' },
+	          props.collabIcon,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            props.hoverinfo
+	          )
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(

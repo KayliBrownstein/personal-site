@@ -12,14 +12,15 @@ class ProjectsContainer extends Component {
 
   render(){
     return(
-      <div className="project-container small-12 large-12 columns">
+      <div className="project-container small-12 medium-12 large-12 columns">
         <ScrollableAnchor id={'projects-section'}>
           <div className="projects-anchor">
           </div>
         </ScrollableAnchor>
         <h1>Projects</h1>
           <ProjectTile
-            collabIcon='<i className="fa fa-user" aria-hidden="true"></i>'
+            hover='Solo contributor'
+            collabIcon={<i className="fa fa-user" aria-hidden="true"></i>}
             imageLink='https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png'
             githubLink='https://github.com/KayliBrownstein/event-planner-voting'
             id='1'
@@ -42,7 +43,8 @@ class ProjectsContainer extends Component {
               "
           />
           <ProjectTile
-            collabIcon='<i className="fa fa-users" aria-hidden="true"></i>'
+            hover='Multiple contributors'
+            collabIcon={<i className="fa fa-users" aria-hidden="true"></i>}
             imageLink='https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png'
             githubLink='https://github.com/emlanctot/appful'
             id='2'
@@ -61,7 +63,8 @@ class ProjectsContainer extends Component {
               "
           />
           <ProjectTile
-            collabIcon='<i class="fa fa-user" aria-hidden="true"></i>'
+            hover='Solo contributor'
+            collabIcon={<i className="fa fa-user" aria-hidden="true"></i>}
             imageLink='https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png'
             githubLink='https://github.com/KayliBrownstein/giphy-search'
             id='3'
@@ -76,7 +79,8 @@ class ProjectsContainer extends Component {
             "
           />
           <ProjectTile
-            collabIcon='<i className="fa fa-users" aria-hidden="true"></i>'
+            hover='Multiple contributors'
+            collabIcon={<i className="fa fa-users" aria-hidden="true"></i>}
             imageLink='https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png'
             githubLink='https://github.com/KayliBrownstein/farmers-market-search'
             id='4'

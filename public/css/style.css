@@ -1,4 +1,5 @@
-@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 /*NAV CONTAINER*/
 
@@ -43,7 +44,8 @@
 }
 
 #connect-icons {
-  /*margin: 5%;*/
+  margin: 10%;
+  margin-top: 2%;
 }
 
 .connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
@@ -97,7 +99,7 @@
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: #A3A948;
+  background-color: #77AB59;
   padding-bottom: 5%;
 }
 
@@ -109,17 +111,38 @@
 }
 
 .project-tile {
-  background-color: #A3A948;
+  background-color: #77AB59;
+  /*margin-bottom: 5%;*/
+  border: solid white 2px;
 }
 
-h2 {
+.project-tile h2 {
   text-align: center;
+  padding-top: 20px;
+  /*padding-bottom: 3px;*/
+  font-family: 'Amatic SC', cursive;
+  font-size: 55px;
+  /*line-height: 1.8;*/
+  color: #FCF8F9;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-shadow: -1.5px -1.5px 0px black;
 }
 
 #github-project, #heroku-project {
   width: 10%;
   height: 10%;
-  padding: 7px;
+  padding: 5px;
+  margin-bottom: 2%;
+}
+
+#font-awesome-icon {
+  font-size: 320%;
+  padding: 5px;
+  padding-bottom: 0;
+  margin-top: 10px;
+  display: inline;
 }
 
 #project-image:hover .rollover {
@@ -163,9 +186,29 @@ h2 {
 	overflow:hidden;
 }
 
+.hoverinfo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.hoverinfo p {
+  display: none;
+  color: #000000;
+}
+.hoverinfo:hover p {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
 @media only screen and (max-width: 640px) {
 
   .contact-container .button {
     width: 100%;
+  }
+  #font-awesome-icon {
+    font-size: 200%;
   }
 }
