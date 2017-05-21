@@ -20844,15 +20844,19 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Connect = __webpack_require__(179);
+	var _ProjectsContainer = __webpack_require__(179);
 
-	var _Connect2 = _interopRequireDefault(_Connect);
+	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
 	var _Resume = __webpack_require__(180);
 
 	var _Resume2 = _interopRequireDefault(_Resume);
 
-	var _ContactFormContainer = __webpack_require__(181);
+	var _Connect = __webpack_require__(181);
+
+	var _Connect2 = _interopRequireDefault(_Connect);
+
+	var _ContactFormContainer = __webpack_require__(182);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
 
@@ -20863,6 +20867,7 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(_Home2.default, null),
+	    _react2.default.createElement(_ProjectsContainer2.default, null),
 	    _react2.default.createElement(_Resume2.default, null),
 	    _react2.default.createElement(_Connect2.default, null),
 	    _react2.default.createElement(_ContactFormContainer2.default, null)
@@ -20920,6 +20925,159 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	var _ProjectTile = __webpack_require__(185);
+
+	var _ProjectTile2 = _interopRequireDefault(_ProjectTile);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProjectsContainer = function (_Component) {
+	  _inherits(ProjectsContainer, _Component);
+
+	  function ProjectsContainer(props) {
+	    _classCallCheck(this, ProjectsContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectsContainer.__proto__ || Object.getPrototypeOf(ProjectsContainer)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(ProjectsContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'project-container small-12 medium-12 large-12 columns row' },
+	        _react2.default.createElement(
+	          _reactScrollableAnchor2.default,
+	          { id: 'projects-section' },
+	          _react2.default.createElement('div', { className: 'projects-anchor' })
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Projects'
+	        ),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          hover: 'Solo contributor',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
+	          id: '1',
+	          siteLink: 'https://seeyouwhen.herokuapp.com',
+	          header: 'SeeYouWhen',
+	          content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
+	        }),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          hover: 'Multiple contributors',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
+	          githubLink: 'https://github.com/emlanctot/appful',
+	          id: '2',
+	          siteLink: 'https://appful.herokuapp.com',
+	          header: 'Appful',
+	          content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
+	        }),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          hover: 'Solo contributor',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/giphy-search',
+	          id: '3',
+	          siteLink: 'http://gif-search-app.herokuapp.com',
+	          header: 'GIF Search',
+	          content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
+	        }),
+	        _react2.default.createElement(_ProjectTile2.default, {
+	          hover: 'Multiple contributors',
+	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
+	          githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
+	          id: '4',
+	          siteLink: 'http://farmalarm.herokuapp.com',
+	          header: 'Farm Alarm',
+	          content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
+	        })
+	      );
+	    }
+	  }]);
+
+	  return ProjectsContainer;
+	}(_react.Component);
+
+	exports.default = ProjectsContainer;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Resume = function Resume(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'resume-container small-12 large-12 columns' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'resume-section' },
+	      _react2.default.createElement('div', { className: 'resume-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Resume'
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
+	    )
+	  );
+	};
+
+	exports.default = Resume;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -20952,22 +21110,14 @@
 	      'div',
 	      { id: 'connect-icons' },
 	      _react2.default.createElement(
-	        'p',
-	        { id: 'github-connect' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-connect-image', className: 'small-12 large-5 columns' })
-	        )
+	        'a',
+	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      ),
 	      _react2.default.createElement(
-	        'p',
-	        { id: 'linkedin-connect' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png', id: 'linkedin-connect-image', className: 'small-12 large-5 columns' })
-	        )
+	        'a',
+	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      )
 	    )
 	  );
@@ -20976,51 +21126,7 @@
 	exports.default = Connect;
 
 /***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Resume = function Resume(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'resume-container' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'resume-section' },
-	      _react2.default.createElement('div', { className: 'resume-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Resume'
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
-	    )
-	  );
-	};
-
-	exports.default = Resume;
-
-/***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21039,11 +21145,11 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _SubjectField = __webpack_require__(182);
+	var _SubjectField = __webpack_require__(183);
 
 	var _SubjectField2 = _interopRequireDefault(_SubjectField);
 
-	var _BodyField = __webpack_require__(183);
+	var _BodyField = __webpack_require__(184);
 
 	var _BodyField2 = _interopRequireDefault(_BodyField);
 
@@ -21260,7 +21366,7 @@
 	exports.default = ContactFormContainer;
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21290,7 +21396,7 @@
 	exports.default = SubjectField;
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21318,6 +21424,110 @@
 	};
 
 	exports.default = BodyField;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProjectTile = function ProjectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'small-12 medium-6 large-6 columns project-tile' },
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'attempt' },
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            props.header
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'font-awesome-icon' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'hoverinfo' },
+	              props.collabIcon,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.hover
+	              )
+	            )
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'point-of-reference' },
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'project-image' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement('img', { src: '' + props.imageLink })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'rollover' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'roll-inner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'roll-content' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.content
+	              )
+	            )
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'icons', className: 'column row' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.githubLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.siteLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ProjectTile;
 
 /***/ }
 /******/ ]);
