@@ -12,7 +12,7 @@ class ProjectsContainer extends Component {
 
   render(){
     return(
-      <div className="project-container small-12 medium-12 large-12 columns row">
+      <div className="project-container small-12 medium-12 large-12 columns">
         <ScrollableAnchor id={'projects-section'}>
           <div className="projects-anchor">
           </div>

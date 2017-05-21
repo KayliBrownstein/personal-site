@@ -20964,7 +20964,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project-container small-12 medium-12 large-12 columns row' },
+	        { className: 'project-container small-12 medium-12 large-12 columns' },
 	        _react2.default.createElement(
 	          _reactScrollableAnchor2.default,
 	          { id: 'projects-section' },
