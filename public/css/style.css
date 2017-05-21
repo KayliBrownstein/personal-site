@@ -111,7 +111,12 @@
 }
 
 .project-tile {
-  background-color: #909A92;
+  background-color: white;
+  /*margin-top: 1%;*/
+  padding-bottom: 5%;
+  width: 0%;
+  /*margin-left: 0.5%;*/
+  /*margin-right: 0.5%;*/
   /*margin-bottom: 5%;*/
   /*border: solid white 2px;*/
 }
@@ -123,12 +128,18 @@
   font-family: 'Amatic SC', cursive;
   font-size: 55px;
   /*line-height: 1.8;*/
-  color: #FCF8F9;
+  color: black;
   text-transform: uppercase;
   /*position: relative;*/
+  display: inline;
   font-weight: bold;
   letter-spacing: 0.1em;
-  text-shadow: -1.5px -1.5px 0px black;
+  /*text-shadow: -1.5px -1.5px 0px grey;*/
+}
+
+.columns {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #github-project, #heroku-project {
@@ -139,10 +150,11 @@
 }
 
 #font-awesome-icon {
-  font-size: 340%;
   display: inline;
   float: right;
   position: absolute;
+  margin: 1%;
+  font-size: 300%;
 }
 
 #project-image:hover .rollover {
@@ -187,13 +199,13 @@
 }
 
 #hoverinfo {
-  top: 15px;
-  left: 15px;
-  font-size: 90%;
-  color: #ffffff;
+  /*top: 10%;*/
+  /*left: 10%;*/
+  font-size: 50%;
+  color: black;
   padding: 5px;
-  padding-bottom: 7px;
-  margin-bottom: 10px;
+  /*padding-bottom: 7px;*/
+  /*margin-bottom: 1px;*/
 }
 #hoverinfo p {
   cursor: pointer;

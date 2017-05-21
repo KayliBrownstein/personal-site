@@ -4,7 +4,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 const ProjectTile = props => {
   return(
     <div className="small-12 medium-6 large-6 columns project-tile">
-    <center><div>
+    <center><div id='attempt'>
       <span><h2>{props.header}</h2>
       <div id='font-awesome-icon'>
         <div id="hoverinfo">
