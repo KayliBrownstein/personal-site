@@ -7,10 +7,20 @@ const ProjectTile = props => {
       <h2>{props.header}</h2>
       <center><div id="icons">
         <a href={props.githubLink} target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" id="github-project" /></a>
-        <a href={props.siteLink} target="_blank"><img src="http://www.iconsdb.com/icons/preview/icon-sets/web-2-blue/link-xxl.png" id="heroku-project" /></a>
+        <a href={props.siteLink} target="_blank"><img src="https://s3.amazonaws.com/kb-personal-site-production/weblink.png" id="heroku-project" /></a>
+        {props.collabIcon}
       </div></center>
-      <div id="project-image">
-        <center><img src="props.imageLink" /></center>
+      <div className="point-of-reference">
+        <div id="project-image">
+          <center><img src={`${props.imageLink}`} /></center>
+          <div className="rollover">
+            <div className="roll-inner">
+              <div className="roll-content">
+                  <p>{props.content}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

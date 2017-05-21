@@ -20848,15 +20848,15 @@
 
 	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
-	var _Resume = __webpack_require__(181);
+	var _Resume = __webpack_require__(180);
 
 	var _Resume2 = _interopRequireDefault(_Resume);
 
-	var _Connect = __webpack_require__(182);
+	var _Connect = __webpack_require__(181);
 
 	var _Connect2 = _interopRequireDefault(_Connect);
 
-	var _ContactFormContainer = __webpack_require__(183);
+	var _ContactFormContainer = __webpack_require__(182);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
 
@@ -20935,7 +20935,7 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _ProjectTile = __webpack_require__(180);
+	var _ProjectTile = __webpack_require__(185);
 
 	var _ProjectTile2 = _interopRequireDefault(_ProjectTile);
 
@@ -20976,32 +20976,40 @@
 	          'Projects'
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          imageLink: 'public/SYW_screenshot.png',
+	          collabIcon: '<i className="fa fa-user" aria-hidden="true"></i>',
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
 	          id: '1',
 	          siteLink: 'https://seeyouwhen.herokuapp.com',
-	          header: 'SeeYouWhen'
+	          header: 'SeeYouWhen',
+	          content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          imageLink: 'public/Appful_screenshot.png',
+	          collabIcon: '<i className="fa fa-users" aria-hidden="true"></i>',
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
 	          githubLink: 'https://github.com/emlanctot/appful',
 	          id: '2',
 	          siteLink: 'https://appful.herokuapp.com',
-	          header: 'Appful'
+	          header: 'Appful',
+	          content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          imageLink: 'public/gifSearch_screenshot.png',
+	          collabIcon: '<i class="fa fa-user" aria-hidden="true"></i>',
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/giphy-search',
 	          id: '3',
 	          siteLink: 'http://gif-search-app.herokuapp.com',
-	          header: 'GIF Search'
+	          header: 'GIF Search',
+	          content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
 	        }),
 	        _react2.default.createElement(_ProjectTile2.default, {
-	          imageLink: 'public/farmalarm_screenshot.png',
+	          collabIcon: '<i className="fa fa-users" aria-hidden="true"></i>',
+	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
 	          githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
 	          id: '4',
 	          siteLink: 'http://farmalarm.herokuapp.com',
-	          header: 'Farm Alarm'
+	          header: 'Farm Alarm',
+	          content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
 	        })
 	      );
 	    }
@@ -21014,67 +21022,6 @@
 
 /***/ },
 /* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var ProjectTile = function ProjectTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'small-12 large-6 columns project-tile' },
-	    _react2.default.createElement(
-	      'h2',
-	      null,
-	      props.header
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'icons' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: props.githubLink, target: '_blank' },
-	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
-	        ),
-	        _react2.default.createElement(
-	          'a',
-	          { href: props.siteLink, target: '_blank' },
-	          _react2.default.createElement('img', { src: 'http://www.iconsdb.com/icons/preview/icon-sets/web-2-blue/link-xxl.png', id: 'heroku-project' })
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'project-image' },
-	      _react2.default.createElement(
-	        'center',
-	        null,
-	        _react2.default.createElement('img', { src: 'props.imageLink' })
-	      )
-	    )
-	  );
-	};
-
-	exports.default = ProjectTile;
-
-/***/ },
-/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21118,7 +21065,7 @@
 	exports.default = Resume;
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21183,7 +21130,7 @@
 	exports.default = Connect;
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21202,11 +21149,11 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _SubjectField = __webpack_require__(184);
+	var _SubjectField = __webpack_require__(183);
 
 	var _SubjectField2 = _interopRequireDefault(_SubjectField);
 
-	var _BodyField = __webpack_require__(185);
+	var _BodyField = __webpack_require__(184);
 
 	var _BodyField2 = _interopRequireDefault(_BodyField);
 
@@ -21423,7 +21370,7 @@
 	exports.default = ContactFormContainer;
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21453,7 +21400,7 @@
 	exports.default = SubjectField;
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21481,6 +21428,89 @@
 	};
 
 	exports.default = BodyField;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProjectTile = function ProjectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'small-12 large-6 columns project-tile' },
+	    _react2.default.createElement(
+	      'h2',
+	      null,
+	      props.header
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'icons' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: props.githubLink, target: '_blank' },
+	          _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: props.siteLink, target: '_blank' },
+	          _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
+	        ),
+	        props.collabIcon
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'point-of-reference' },
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'project-image' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement('img', { src: '' + props.imageLink })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'rollover' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'roll-inner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'roll-content' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.content
+	              )
+	            )
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ProjectTile;
 
 /***/ }
 /******/ ]);

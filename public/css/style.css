@@ -1,3 +1,5 @@
+@import "font-awesome";
+
 /*NAV CONTAINER*/
 
 .navbar {
@@ -100,7 +102,10 @@
 }
 
 #project-image {
-  margin-bottom: 5%;
+  margin: 5%;
+  display:inline-block;
+  vertical-align:middle;
+  margin:0 2% 20px;
 }
 
 .project-tile {
@@ -114,9 +119,49 @@ h2 {
 #github-project, #heroku-project {
   width: 10%;
   height: 10%;
-  padding: 5px;
+  padding: 7px;
 }
 
+#project-image:hover .rollover {
+	transform:translateX(0)
+}
+
+/*#project-image img {
+	width:100%;
+	height:auto
+}*/
+
+.rollover {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background:rgba(0,0,0,0.6);
+	color:#fff;
+	transform:translateX(-100%);
+	transition:all .5s ease;
+}
+.roll-inner {
+	display:table;
+	width:100%;
+	height:100%;
+}
+.roll-content {
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+}
+.roll-content p {
+	width:70%;
+	margin:auto;
+}
+.point-of-reference {
+	position:relative;
+	margin:auto;
+	text-align:center;
+	overflow:hidden;
+}
 
 @media only screen and (max-width: 640px) {
 
