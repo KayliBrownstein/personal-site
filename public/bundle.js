@@ -20848,15 +20848,15 @@
 
 	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
-	var _Resume = __webpack_require__(180);
+	var _Resume = __webpack_require__(181);
 
 	var _Resume2 = _interopRequireDefault(_Resume);
 
-	var _Connect = __webpack_require__(181);
+	var _Connect = __webpack_require__(182);
 
 	var _Connect2 = _interopRequireDefault(_Connect);
 
-	var _ContactFormContainer = __webpack_require__(182);
+	var _ContactFormContainer = __webpack_require__(183);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
 
@@ -20935,7 +20935,7 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _ProjectTile = __webpack_require__(185);
+	var _ProjectTile = __webpack_require__(180);
 
 	var _ProjectTile2 = _interopRequireDefault(_ProjectTile);
 
@@ -21044,6 +21044,110 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var ProjectTile = function ProjectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'small-12 medium-6 large-6 columns project-tile' },
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'attempt' },
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            props.header
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'font-awesome-icon' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'hoverinfo' },
+	              props.collabIcon,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.hover
+	              )
+	            )
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'point-of-reference' },
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'project-image' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement('img', { src: '' + props.imageLink })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'rollover' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'roll-inner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'roll-content' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                props.content
+	              )
+	            )
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'icons', className: 'column row' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.githubLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: props.siteLink, target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ProjectTile;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	var Resume = function Resume(props) {
 	  return _react2.default.createElement(
 	    'div',
@@ -21069,7 +21173,7 @@
 	exports.default = Resume;
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21126,7 +21230,7 @@
 	exports.default = Connect;
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21145,11 +21249,11 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _SubjectField = __webpack_require__(183);
+	var _SubjectField = __webpack_require__(184);
 
 	var _SubjectField2 = _interopRequireDefault(_SubjectField);
 
-	var _BodyField = __webpack_require__(184);
+	var _BodyField = __webpack_require__(185);
 
 	var _BodyField2 = _interopRequireDefault(_BodyField);
 
@@ -21366,7 +21470,7 @@
 	exports.default = ContactFormContainer;
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21396,7 +21500,7 @@
 	exports.default = SubjectField;
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21424,110 +21528,6 @@
 	};
 
 	exports.default = BodyField;
-
-/***/ },
-/* 185 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var ProjectTile = function ProjectTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'small-12 medium-6 large-6 columns project-tile' },
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'attempt' },
-	        _react2.default.createElement(
-	          'span',
-	          null,
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            props.header
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'font-awesome-icon' },
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'hoverinfo' },
-	              props.collabIcon,
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                props.hover
-	              )
-	            )
-	          )
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'point-of-reference' },
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'project-image' },
-	        _react2.default.createElement(
-	          'center',
-	          null,
-	          _react2.default.createElement('img', { src: '' + props.imageLink })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'rollover' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'roll-inner' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'roll-content' },
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                props.content
-	              )
-	            )
-	          )
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'icons', className: 'column row' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: props.githubLink, target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://image.flaticon.com/icons/svg/25/25231.svg', id: 'github-project' })
-	      ),
-	      _react2.default.createElement(
-	        'a',
-	        { href: props.siteLink, target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
-	      )
-	    )
-	  );
-	};
-
-	exports.default = ProjectTile;
 
 /***/ }
 /******/ ]);
