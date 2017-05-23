@@ -82,18 +82,9 @@
 }
 
 /*RESUME*/
-#resume-pdf {
-  width: 800px;
-  height: 1080px;
-  margin-bottom: 5%;
-  border: solid black 1px;
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-}
 
 .resume-container {
-  background-color: #FF9D2E;
+  background-color: #BCD8BF;
 }
 
 /*PROJECTS CONTAINER*/
