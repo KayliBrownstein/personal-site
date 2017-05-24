@@ -2,9 +2,8 @@ import React from 'react';
 
 const SoftwareTile = props => {
   return(
-    <div className="software-skill-tile small-12 medium-6 large-4 columns">
-      <h5>{props.software}</h5>
-      <img src={props.icon} />
+    <div className="software-skill-tile small-2 medium-2 large-2 columns">
+      <img src={props.icon} width='100' height='150'/>
     </div>
   )
 }

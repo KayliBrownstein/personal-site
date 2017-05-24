@@ -21239,62 +21239,62 @@
 	var TechnicalSkillsContainer = function TechnicalSkillsContainer(props) {
 	  var LANGUAGES = [{
 	    "name": "HTML",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'html-logo.png'
 	  }, {
 	    "name": "CSS",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-css3 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'css-logo.png'
 	  }, {
 	    "name": "Javascript",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'javascript-logo.png'
 	  }, {
 	    "name": "Ruby",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'ruby-logo.png'
 	  }];
 
 	  var DATABASES = [{
 	    "name": "SQL",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'sql-logo.png'
 	  }, {
 	    "name": "PostgreSQL",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'postgresql-logo.png'
 	  }];
 
 	  var SOFTWARE = [{
 	    "name": "Rails",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'ror-logo.png'
 	  }, {
 	    "name": "ReactJS",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'react-logo.png'
 	  }, {
 	    "name": "Sinatra",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'sinatra-logo.png'
 	  }, {
 	    "name": "jQuery",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'jquery-logo.png'
 	  }, {
 	    "name": "RSpec",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'rspec-logo.png'
 	  }, {
 	    "name": "Capybara",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'capybara-logo.png'
 	  }, {
 	    "name": "Sass",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'sass-logo.png'
 	  }, {
 	    "name": "Foundation",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'foundation-logo.png'
 	  }, {
 	    "name": "Heroku",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'heroku-logo.png'
 	  }, {
 	    "name": "Git",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'git-logo.png'
 	  }, {
 	    "name": "Github",
 	    "icon": 'github-icon.png'
 	  }, {
 	    "name": "APIs",
-	    "icon": _react2.default.createElement('i', { className: 'fa fa-html5 fa-4x', 'aria-hidden': 'true' })
+	    "icon": 'api-logo.png'
 	  }, {
 	    "name": "JIRA",
 	    "icon": 'jira-icon.png'
@@ -21329,30 +21329,30 @@
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'small-12 medium-12 large-12 columns' },
+	      { className: 'languages-container small-12 medium-8 large-8 small-centered large-centered columns' },
 	      _react2.default.createElement(
 	        'h5',
-	        null,
+	        { className: 'tech-skills-title' },
 	        'Languages'
 	      ),
 	      language_skills
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'small-12 medium-12 large-12 columns' },
+	      { className: 'databases-container small-12 medium-8 large-8 small-centered large-centered columns' },
 	      _react2.default.createElement(
 	        'h5',
-	        null,
+	        { className: 'tech-skills-title' },
 	        'Databases'
 	      ),
 	      database_skills
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'small-12 medium-12 large-12 columns' },
+	      { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
 	      _react2.default.createElement(
 	        'h5',
-	        null,
+	        { className: 'tech-skills-title' },
 	        'Software/Tools/Frameworks'
 	      ),
 	      software_skills
@@ -21905,7 +21905,7 @@
 /* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21919,14 +21919,9 @@
 
 	var LanguageTile = function LanguageTile(props) {
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "language-skill-tile small-12 medium-6 large-4 columns" },
-	    _react2.default.createElement(
-	      "h5",
-	      null,
-	      props.language
-	    ),
-	    props.icon
+	    'div',
+	    { className: 'language-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
 	  );
 	};
 
@@ -21936,7 +21931,7 @@
 /* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21950,14 +21945,9 @@
 
 	var DatabaseTile = function DatabaseTile(props) {
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "database-skill-tile small-12 medium-6 large-4 columns" },
-	    _react2.default.createElement(
-	      "h5",
-	      null,
-	      props.database
-	    ),
-	    props.icon
+	    'div',
+	    { className: 'database-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
 	  );
 	};
 
@@ -21967,7 +21957,7 @@
 /* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21981,14 +21971,9 @@
 
 	var SoftwareTile = function SoftwareTile(props) {
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "software-skill-tile small-12 medium-6 large-4 columns" },
-	    _react2.default.createElement(
-	      "h5",
-	      null,
-	      props.software
-	    ),
-	    _react2.default.createElement("img", { src: props.icon })
+	    'div',
+	    { className: 'software-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
 	  );
 	};
 

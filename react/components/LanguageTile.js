@@ -2,9 +2,8 @@ import React from 'react';
 
 const LanguageTile = props => {
   return(
-    <div className="language-skill-tile small-12 medium-6 large-4 columns">
-      <h5>{props.language}</h5>
-      {props.icon}
+    <div className="language-skill-tile small-2 medium-2 large-2 columns">
+      <img src={props.icon} width='100' height='150'/>
     </div>
   )
 }

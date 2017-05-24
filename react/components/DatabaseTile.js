@@ -2,9 +2,8 @@ import React from 'react';
 
 const DatabaseTile = props => {
   return(
-    <div className="database-skill-tile small-12 medium-6 large-4 columns">
-      <h5>{props.database}</h5>
-      {props.icon}
+    <div className="database-skill-tile small-2 medium-2 large-2 columns">
+      <img src={props.icon} width='100' height='150'/>
     </div>
   )
 }

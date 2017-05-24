@@ -7,81 +7,81 @@ const TechnicalSkillsContainer = props => {
   const LANGUAGES = [
     {
       "name": "HTML",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'html-logo.png'
     },
     {
       "name": "CSS",
-      "icon": <i className="fa fa-css3 fa-4x" aria-hidden="true"></i>
+      "icon": 'css-logo.png'
     },
     {
       "name": "Javascript",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'javascript-logo.png'
     },
     {
       "name": "Ruby",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'ruby-logo.png'
     }
   ]
 
   const DATABASES = [
     {
       "name": "SQL",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'sql-logo.png'
     },
     {
       "name": "PostgreSQL",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'postgresql-logo.png'
     }
   ]
 
   const SOFTWARE = [
     {
       "name": "Rails",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'ror-logo.png'
     },
     {
       "name": "ReactJS",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'react-logo.png'
     },
     {
       "name": "Sinatra",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'sinatra-logo.png'
     },
     {
       "name": "jQuery",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'jquery-logo.png'
     },
     {
       "name": "RSpec",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'rspec-logo.png'
     },
     {
       "name": "Capybara",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'capybara-logo.png'
     },
     {
       "name": "Sass",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'sass-logo.png'
     },
     {
       "name": "Foundation",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'foundation-logo.png'
     },
     {
       "name": "Heroku",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'heroku-logo.png'
     },
     {
       "name": "Git",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'git-logo.png'
     },
     {
       "name": "Github",
-      "icon": 'github-icon.png',
+      "icon": 'github-icon.png'
     },
     {
       "name": "APIs",
-      "icon": <i className="fa fa-html5 fa-4x" aria-hidden="true"></i>
+      "icon": 'api-logo.png'
     },
     {
       "name": "JIRA",
@@ -117,16 +117,16 @@ const TechnicalSkillsContainer = props => {
       return(
       <div className="tech-skills-container small-12 medium-12 large-12 columns">
         <h3>Technical Skills</h3>
-        <div className="small-12 medium-12 large-12 columns">
-        <h5>Languages</h5>
+        <div className="languages-container small-12 medium-8 large-8 small-centered large-centered columns">
+        <h5 className="tech-skills-title">Languages</h5>
         {language_skills}
         </div>
-        <div className="small-12 medium-12 large-12 columns">
-        <h5>Databases</h5>
+        <div className="databases-container small-12 medium-8 large-8 small-centered large-centered columns">
+        <h5 className="tech-skills-title">Databases</h5>
         {database_skills}
         </div>
-        <div className="small-12 medium-12 large-12 columns">
-        <h5>Software/Tools/Frameworks</h5>
+        <div className="software-container small-12 medium-8 large-8 small-centered large-centered columns">
+        <h5 className="tech-skills-title">Software/Tools/Frameworks</h5>
         {software_skills}
         </div>
       </div>
