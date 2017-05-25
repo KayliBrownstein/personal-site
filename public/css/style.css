@@ -82,18 +82,9 @@
 }
 
 /*RESUME*/
-#resume-pdf {
-  width: 800px;
-  height: 1080px;
-  margin-bottom: 5%;
-  border: solid black 1px;
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-}
 
 .resume-container {
-  background-color: #84BFC3;
+  background-color: #BCD8BF;
 }
 
 /*PROJECTS CONTAINER*/
@@ -224,6 +215,25 @@
   width: 100px;
   z-index: 98;
   font-size: 8px;
+}
+
+.tech-skills-container {
+  text-align: center;
+  padding: 5%;
+}
+
+.languages-container, .databases-container, .software-container {
+  padding: 5%;
+}
+
+h3, h5 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tech-skills-title {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 640px) {
