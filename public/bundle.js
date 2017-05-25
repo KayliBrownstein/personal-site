@@ -20852,11 +20852,11 @@
 
 	var _ResumeContainer2 = _interopRequireDefault(_ResumeContainer);
 
-	var _Connect = __webpack_require__(187);
+	var _Connect = __webpack_require__(190);
 
 	var _Connect2 = _interopRequireDefault(_Connect);
 
-	var _ContactFormContainer = __webpack_require__(188);
+	var _ContactFormContainer = __webpack_require__(191);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
 
@@ -21152,11 +21152,11 @@
 
 	var _TechnicalSkillsContainer2 = _interopRequireDefault(_TechnicalSkillsContainer);
 
-	var _ProfessionalExperienceContainer = __webpack_require__(183);
+	var _ProfessionalExperienceContainer = __webpack_require__(186);
 
 	var _ProfessionalExperienceContainer2 = _interopRequireDefault(_ProfessionalExperienceContainer);
 
-	var _EducationContainer = __webpack_require__(185);
+	var _EducationContainer = __webpack_require__(188);
 
 	var _EducationContainer2 = _interopRequireDefault(_EducationContainer);
 
@@ -21222,15 +21222,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _LanguageTile = __webpack_require__(191);
+	var _LanguageTile = __webpack_require__(183);
 
 	var _LanguageTile2 = _interopRequireDefault(_LanguageTile);
 
-	var _DatabaseTile = __webpack_require__(192);
+	var _DatabaseTile = __webpack_require__(184);
 
 	var _DatabaseTile2 = _interopRequireDefault(_DatabaseTile);
 
-	var _SoftwareTile = __webpack_require__(193);
+	var _SoftwareTile = __webpack_require__(185);
 
 	var _SoftwareTile2 = _interopRequireDefault(_SoftwareTile);
 
@@ -21372,13 +21372,91 @@
 	  value: true
 	});
 
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var LanguageTile = function LanguageTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'language-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = LanguageTile;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var DatabaseTile = function DatabaseTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'database-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = DatabaseTile;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SoftwareTile = function SoftwareTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'software-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = SoftwareTile;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ProfExTile = __webpack_require__(184);
+	var _ProfExTile = __webpack_require__(187);
 
 	var _ProfExTile2 = _interopRequireDefault(_ProfExTile);
 
@@ -21424,7 +21502,7 @@
 	exports.default = ProfessionalExperienceContainer;
 
 /***/ },
-/* 184 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21454,7 +21532,7 @@
 	exports.default = ProfExTile;
 
 /***/ },
-/* 185 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21469,7 +21547,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _EducationTile = __webpack_require__(186);
+	var _EducationTile = __webpack_require__(189);
 
 	var _EducationTile2 = _interopRequireDefault(_EducationTile);
 
@@ -21515,7 +21593,7 @@
 	exports.default = EducationContainer;
 
 /***/ },
-/* 186 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21545,7 +21623,7 @@
 	exports.default = EducationTile;
 
 /***/ },
-/* 187 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21602,7 +21680,7 @@
 	exports.default = Connect;
 
 /***/ },
-/* 188 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21621,11 +21699,11 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _SubjectField = __webpack_require__(189);
+	var _SubjectField = __webpack_require__(192);
 
 	var _SubjectField2 = _interopRequireDefault(_SubjectField);
 
-	var _BodyField = __webpack_require__(190);
+	var _BodyField = __webpack_require__(193);
 
 	var _BodyField2 = _interopRequireDefault(_BodyField);
 
@@ -21842,7 +21920,7 @@
 	exports.default = ContactFormContainer;
 
 /***/ },
-/* 189 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21872,7 +21950,7 @@
 	exports.default = SubjectField;
 
 /***/ },
-/* 190 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21900,84 +21978,6 @@
 	};
 
 	exports.default = BodyField;
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var LanguageTile = function LanguageTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'language-skill-tile small-2 medium-2 large-2 columns' },
-	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
-	  );
-	};
-
-	exports.default = LanguageTile;
-
-/***/ },
-/* 192 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var DatabaseTile = function DatabaseTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'database-skill-tile small-2 medium-2 large-2 columns' },
-	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
-	  );
-	};
-
-	exports.default = DatabaseTile;
-
-/***/ },
-/* 193 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SoftwareTile = function SoftwareTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'software-skill-tile small-2 medium-2 large-2 columns' },
-	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
-	  );
-	};
-
-	exports.default = SoftwareTile;
 
 /***/ }
 /******/ ]);
