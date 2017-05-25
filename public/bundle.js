@@ -20848,15 +20848,15 @@
 
 	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
-	var _Resume = __webpack_require__(181);
+	var _Resume = __webpack_require__(194);
 
 	var _Resume2 = _interopRequireDefault(_Resume);
 
-	var _Connect = __webpack_require__(182);
+	var _Connect = __webpack_require__(190);
 
 	var _Connect2 = _interopRequireDefault(_Connect);
 
-	var _ContactFormContainer = __webpack_require__(183);
+	var _ContactFormContainer = __webpack_require__(191);
 
 	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
 
@@ -21129,51 +21129,16 @@
 	exports.default = ProjectTile;
 
 /***/ },
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Resume = function Resume(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'resume-container small-12 large-12 columns' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'resume-section' },
-	      _react2.default.createElement('div', { className: 'resume-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Resume'
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
-	    )
-	  );
-	};
-
-	exports.default = Resume;
-
-/***/ },
-/* 182 */
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21230,7 +21195,7 @@
 	exports.default = Connect;
 
 /***/ },
-/* 183 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21249,11 +21214,11 @@
 
 	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
 
-	var _SubjectField = __webpack_require__(184);
+	var _SubjectField = __webpack_require__(192);
 
 	var _SubjectField2 = _interopRequireDefault(_SubjectField);
 
-	var _BodyField = __webpack_require__(185);
+	var _BodyField = __webpack_require__(193);
 
 	var _BodyField2 = _interopRequireDefault(_BodyField);
 
@@ -21470,7 +21435,7 @@
 	exports.default = ContactFormContainer;
 
 /***/ },
-/* 184 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21500,7 +21465,7 @@
 	exports.default = SubjectField;
 
 /***/ },
-/* 185 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21528,6 +21493,50 @@
 	};
 
 	exports.default = BodyField;
+
+/***/ },
+/* 194 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Resume = function Resume(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'resume-container small-12 large-12 columns' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'resume-section' },
+	      _react2.default.createElement('div', { className: 'resume-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Resume'
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
+	    )
+	  );
+	};
+
+	exports.default = Resume;
 
 /***/ }
 /******/ ]);
