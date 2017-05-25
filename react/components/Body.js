@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import ProjectsContainer from '../containers/ProjectsContainer';
-import Resume from './Resume';
+import ResumeContainer from '../containers/ResumeContainer';
 import Connect from './Connect';
 import ContactFormContainer from '../containers/ContactFormContainer';
 
@@ -10,7 +10,7 @@ const Body = props => {
     <div>
       <Home />
       <ProjectsContainer />
-      <Resume />
+      <ResumeContainer />
       <Connect />
       <ContactFormContainer />
     </div>

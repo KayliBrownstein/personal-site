@@ -20848,9 +20848,9 @@
 
 	var _ProjectsContainer2 = _interopRequireDefault(_ProjectsContainer);
 
-	var _Resume = __webpack_require__(194);
+	var _ResumeContainer = __webpack_require__(181);
 
-	var _Resume2 = _interopRequireDefault(_Resume);
+	var _ResumeContainer2 = _interopRequireDefault(_ResumeContainer);
 
 	var _Connect = __webpack_require__(190);
 
@@ -20868,7 +20868,7 @@
 	    null,
 	    _react2.default.createElement(_Home2.default, null),
 	    _react2.default.createElement(_ProjectsContainer2.default, null),
-	    _react2.default.createElement(_Resume2.default, null),
+	    _react2.default.createElement(_ResumeContainer2.default, null),
 	    _react2.default.createElement(_Connect2.default, null),
 	    _react2.default.createElement(_ContactFormContainer2.default, null)
 	  );
@@ -21129,15 +21129,500 @@
 	exports.default = ProjectTile;
 
 /***/ },
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	var _TechnicalSkillsContainer = __webpack_require__(182);
+
+	var _TechnicalSkillsContainer2 = _interopRequireDefault(_TechnicalSkillsContainer);
+
+	var _ProfessionalExperienceContainer = __webpack_require__(186);
+
+	var _ProfessionalExperienceContainer2 = _interopRequireDefault(_ProfessionalExperienceContainer);
+
+	var _EducationContainer = __webpack_require__(188);
+
+	var _EducationContainer2 = _interopRequireDefault(_EducationContainer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ResumeContainer = function (_Component) {
+	  _inherits(ResumeContainer, _Component);
+
+	  function ResumeContainer(props) {
+	    _classCallCheck(this, ResumeContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ResumeContainer.__proto__ || Object.getPrototypeOf(ResumeContainer)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(ResumeContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'resume-container small-12 medium-12 large-12 columns' },
+	        _react2.default.createElement(
+	          _reactScrollableAnchor2.default,
+	          { id: 'resume-section' },
+	          _react2.default.createElement('div', { className: 'resume-anchor' })
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Resume'
+	        ),
+	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
+	        _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
+	        _react2.default.createElement(_EducationContainer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return ResumeContainer;
+	}(_react.Component);
+
+	exports.default = ResumeContainer;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _LanguageTile = __webpack_require__(183);
+
+	var _LanguageTile2 = _interopRequireDefault(_LanguageTile);
+
+	var _DatabaseTile = __webpack_require__(184);
+
+	var _DatabaseTile2 = _interopRequireDefault(_DatabaseTile);
+
+	var _SoftwareTile = __webpack_require__(185);
+
+	var _SoftwareTile2 = _interopRequireDefault(_SoftwareTile);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var TechnicalSkillsContainer = function TechnicalSkillsContainer(props) {
+	  var LANGUAGES = [{
+	    "name": "HTML",
+	    "icon": 'html-logo.png'
+	  }, {
+	    "name": "CSS",
+	    "icon": 'css-logo.png'
+	  }, {
+	    "name": "Javascript",
+	    "icon": 'javascript-logo.png'
+	  }, {
+	    "name": "Ruby",
+	    "icon": 'ruby-logo.png'
+	  }];
+
+	  var DATABASES = [{
+	    "name": "SQL",
+	    "icon": 'sql-logo.png'
+	  }, {
+	    "name": "PostgreSQL",
+	    "icon": 'postgresql-logo.png'
+	  }];
+
+	  var SOFTWARE = [{
+	    "name": "Rails",
+	    "icon": 'ror-logo.png'
+	  }, {
+	    "name": "ReactJS",
+	    "icon": 'react-logo.png'
+	  }, {
+	    "name": "Sinatra",
+	    "icon": 'sinatra-logo.png'
+	  }, {
+	    "name": "jQuery",
+	    "icon": 'jquery-logo.png'
+	  }, {
+	    "name": "RSpec",
+	    "icon": 'rspec-logo.png'
+	  }, {
+	    "name": "Capybara",
+	    "icon": 'capybara-logo.png'
+	  }, {
+	    "name": "Sass",
+	    "icon": 'sass-logo.png'
+	  }, {
+	    "name": "Foundation",
+	    "icon": 'foundation-logo.png'
+	  }, {
+	    "name": "Heroku",
+	    "icon": 'heroku-logo.png'
+	  }, {
+	    "name": "Git",
+	    "icon": 'git-logo.png'
+	  }, {
+	    "name": "Github",
+	    "icon": 'github-icon.png'
+	  }, {
+	    "name": "APIs",
+	    "icon": 'api-logo.png'
+	  }, {
+	    "name": "JIRA",
+	    "icon": 'jira-icon.png'
+	  }];
+
+	  var language_skills = LANGUAGES.map(function (language) {
+	    return _react2.default.createElement(_LanguageTile2.default, {
+	      language: language.name,
+	      icon: language.icon
+	    });
+	  });
+	  var database_skills = DATABASES.map(function (database) {
+	    return _react2.default.createElement(_DatabaseTile2.default, {
+	      database: database.name,
+	      icon: database.icon
+	    });
+	  });
+	  var software_skills = SOFTWARE.map(function (software) {
+	    return _react2.default.createElement(_SoftwareTile2.default, {
+	      software: software.name,
+	      icon: software.icon
+	    });
+	  });
+
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
+	    _react2.default.createElement(
+	      'h3',
+	      null,
+	      'Technical Skills'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'languages-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	      _react2.default.createElement(
+	        'h5',
+	        { className: 'tech-skills-title' },
+	        'Languages'
+	      ),
+	      language_skills
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'databases-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	      _react2.default.createElement(
+	        'h5',
+	        { className: 'tech-skills-title' },
+	        'Databases'
+	      ),
+	      database_skills
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	      _react2.default.createElement(
+	        'h5',
+	        { className: 'tech-skills-title' },
+	        'Software/Tools/Frameworks'
+	      ),
+	      software_skills
+	    )
+	  );
+	};
+
+	exports.default = TechnicalSkillsContainer;
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var LanguageTile = function LanguageTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'language-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = LanguageTile;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var DatabaseTile = function DatabaseTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'database-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = DatabaseTile;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SoftwareTile = function SoftwareTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'software-skill-tile small-2 medium-2 large-2 columns' },
+	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
+	  );
+	};
+
+	exports.default = SoftwareTile;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ProfExTile = __webpack_require__(187);
+
+	var _ProfExTile2 = _interopRequireDefault(_ProfExTile);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProfessionalExperienceContainer = function (_Component) {
+	  _inherits(ProfessionalExperienceContainer, _Component);
+
+	  function ProfessionalExperienceContainer(props) {
+	    _classCallCheck(this, ProfessionalExperienceContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ProfessionalExperienceContainer.__proto__ || Object.getPrototypeOf(ProfessionalExperienceContainer)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(ProfessionalExperienceContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'profex-container small-12 medium-12 large-12 columns' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Professional Experience'
+	        ),
+	        _react2.default.createElement(_ProfExTile2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return ProfessionalExperienceContainer;
+	}(_react.Component);
+
+	exports.default = ProfessionalExperienceContainer;
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProfExTile = function ProfExTile(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "profex-tile" },
+	    _react2.default.createElement(
+	      "p",
+	      null,
+	      "This is the ProfEx Tile."
+	    )
+	  );
+	};
+
+	exports.default = ProfExTile;
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _EducationTile = __webpack_require__(189);
+
+	var _EducationTile2 = _interopRequireDefault(_EducationTile);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EducationContainer = function (_Component) {
+	  _inherits(EducationContainer, _Component);
+
+	  function EducationContainer(props) {
+	    _classCallCheck(this, EducationContainer);
+
+	    var _this = _possibleConstructorReturn(this, (EducationContainer.__proto__ || Object.getPrototypeOf(EducationContainer)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(EducationContainer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'education-container small-12 medium-12 large-12 columns' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Education'
+	        ),
+	        _react2.default.createElement(_EducationTile2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return EducationContainer;
+	}(_react.Component);
+
+	exports.default = EducationContainer;
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var EducationTile = function EducationTile(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "education-tile" },
+	    _react2.default.createElement(
+	      "p",
+	      null,
+	      "This is the Education Tile."
+	    )
+	  );
+	};
+
+	exports.default = EducationTile;
+
+/***/ },
 /* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21493,50 +21978,6 @@
 	};
 
 	exports.default = BodyField;
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Resume = function Resume(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'resume-container small-12 large-12 columns' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'resume-section' },
-	      _react2.default.createElement('div', { className: 'resume-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Resume'
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement('iframe', { src: 'KayliBrownsteinResumePersonalSite.pdf', id: 'resume-pdf' })
-	    )
-	  );
-	};
-
-	exports.default = Resume;
 
 /***/ }
 /******/ ]);
