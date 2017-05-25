@@ -81,12 +81,6 @@
   text-align: center;
 }
 
-/*RESUME*/
-
-.resume-container {
-  background-color: #BCD8BF;
-}
-
 /*PROJECTS CONTAINER*/
 
 .project-container {
@@ -217,6 +211,12 @@
   font-size: 8px;
 }
 
+/*RESUME*/
+
+.resume-container {
+  background-color: #BCD8BF;
+}
+
 .tech-skills-container {
   text-align: center;
   padding: 5%;
@@ -232,9 +232,14 @@ h3, h5 {
   padding-bottom: 20px;
 }
 
-.tech-skills-title {
+.software-skill-title {
   padding: 15px;
 }
+
+.columns:last-child {
+  float: left !important;
+}
+
 
 @media only screen and (max-width: 640px) {
 
