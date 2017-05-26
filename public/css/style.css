@@ -223,7 +223,8 @@
 }
 
 .languages-container, .databases-container, .software-container {
-  padding: 5%;
+  padding: 10%;
+  display: block;
 }
 
 h3, h5 {
@@ -232,13 +233,27 @@ h3, h5 {
   padding-bottom: 20px;
 }
 
+.tech-skills-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .software-skill-title {
   padding: 15px;
 }
 
-.columns:last-child {
+.languages-container .columns:last-child {
   float: left !important;
 }
+
+.databases-container .columns:last-child {
+  float: left !important;
+}
+
+.software-container .columns:last-child {
+  float: left !important;
+}
+
 
 
 @media only screen and (max-width: 640px) {
