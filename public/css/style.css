@@ -54,6 +54,7 @@
   padding: 5%;
   text-transform: uppercase;
   font-family: Times;
+  display: inline;
 }
 
 /*CONTACT CONTAINER*/
@@ -231,6 +232,7 @@ h3 {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
+  display: inline;
 }
 
 .tech-skills-title {
@@ -271,6 +273,9 @@ h3 {
 /*.education-right {
   float: right;
 }*/
+#up-button {
+  display: inline;
+}
 
 
 @media only screen and (max-width: 640px) {

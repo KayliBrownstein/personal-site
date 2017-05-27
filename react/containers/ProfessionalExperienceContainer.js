@@ -46,8 +46,11 @@ const ProfessionalExperienceContainer = props =>  {
     )
   })
     return(
-      <div className="profex-container small-12 medium-8 large-8 large-centered columns">
-        <h3>Professional Experience</h3>
+      <div className="profex-container small-12 medium-8 large-8 medium-centered large-centered columns">
+        <center><h3>Professional Experience</h3>
+        <div id='up-button'>
+          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+        </div></center>
         {profex}
       </div>
     )

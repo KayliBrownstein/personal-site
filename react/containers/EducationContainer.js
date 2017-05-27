@@ -29,8 +29,11 @@ const EducationContainer = props =>  {
     )
   })
     return(
-      <div className="education-container small-12 medium-10 large-10 large-centered columns">
-        <h3>Education</h3>
+      <div className="education-container small-12 medium-12 large-10 medium-centered large-centered columns">
+        <center><h3>Education</h3>
+        <div id='up-button'>
+          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+        </div></center>
         {education}
       </div>
     )

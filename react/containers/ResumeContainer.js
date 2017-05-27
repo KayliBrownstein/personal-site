@@ -19,7 +19,10 @@ class ResumeContainer extends Component {
           <div className="resume-anchor">
           </div>
         </ScrollableAnchor>
-        <h1>Resume</h1>
+        <center><h3>Resume</h3>
+        <div id='up-button'>
+          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+        </div></center>
         <TechnicalSkillsContainer />
         <ProfessionalExperienceContainer />
         <EducationContainer />

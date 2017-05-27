@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import SubjectField from '../components/SubjectField';
 import BodyField from '../components/BodyField';
+import { configureAnchors } from 'react-scrollable-anchor';
 
 class ContactFormContainer extends Component {
   constructor(props){
@@ -101,6 +102,7 @@ class ContactFormContainer extends Component {
   }
 
   render(){
+    configureAnchors({ keepLastAnchorHash: true });
     let errorDiv;
     let errorItems;
     let successSpan
@@ -125,7 +127,10 @@ class ContactFormContainer extends Component {
           <div className="contact-anchor">
           </div>
         </ScrollableAnchor>
-        <h1>Contact Me</h1>
+        <center><h1>Contact</h1>
+        <div id='up-button'>
+          <a href="#home"><i className="fa fa-chevron-up" aria-hidden="true"></i></a>
+        </div></center>
         <form onSubmit={this.handleFormSubmit}>
           <SubjectField
             name='email'
