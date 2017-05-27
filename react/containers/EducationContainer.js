@@ -10,7 +10,7 @@ const EducationContainer = props =>  {
       "study": "B.A. English, French"
     },
     {
-      "name": "La Sorbonne, Paris IV",
+      "name": "La Sorbonne",
       "location": "Paris, France",
       "dates": "August '13 - December '13",
       "study": "French Literature"
