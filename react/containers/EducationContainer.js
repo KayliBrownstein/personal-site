@@ -6,13 +6,13 @@ const EducationContainer = props =>  {
     {
       "name": "Boston College",
       "location": "Chestnut Hill, MA",
-      "dates": "September 2011 - May 2015",
+      "dates": "September '11 - May '15",
       "study": "B.A. English, French"
     },
     {
       "name": "La Sorbonne, Paris IV",
       "location": "Paris, France",
-      "dates": "August 2013 - December 2013",
+      "dates": "August '13 - December '13",
       "study": "French Literature"
     }
   ]
@@ -29,7 +29,7 @@ const EducationContainer = props =>  {
     )
   })
     return(
-      <div className="education-container small-12 medium-12 large-12 columns">
+      <div className="education-container small-12 medium-10 large-10 large-centered columns">
         <h3>Education</h3>
         {education}
       </div>

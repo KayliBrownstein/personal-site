@@ -255,16 +255,22 @@ h3, h5 {
 }
 
 /*EDUCATION*/
-.education-tile {
-  background-color: white;
-  /*padding: 1px;
-  margin: 1px;
-  width: 25%;*/
+.education-tile, .profex-tile {
+  background-color: #F6F1DE;
+  border: solid black 1px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 15px;
+  height: 150px;
 }
 
-.education-location, .education-date {
-  float: right;
+.education-container, .profex-container {
+  padding-bottom: 5%;
 }
+
+/*.education-right {
+  float: right;
+}*/
 
 
 @media only screen and (max-width: 640px) {
@@ -274,5 +280,10 @@ h3, h5 {
   }
   #font-awesome-icon {
     font-size: 200%;
+  }
+  .education-tile, .profex-tile {
+    margin-left: 0;
+    margin-right: 0;
+    height: 200px;
   }
 }
