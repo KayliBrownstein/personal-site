@@ -1,22 +1,42 @@
 import React, { Component } from 'react';
 import EducationTile from '../components/EducationTile';
 
-class EducationContainer extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-
+const EducationContainer = props =>  {
+  const EDUCATION = [
+    {
+      "name": "Boston College",
+      "location": "Chestnut Hill, MA",
+      "dates": "September '11 - May '15",
+      "study": "B.A. English, French"
+    },
+    {
+      "name": "La Sorbonne",
+      "location": "Paris, France",
+      "dates": "August '13 - December '13",
+      "study": "French Literature"
     }
-  }
+  ]
 
-  render(){
+  let education = EDUCATION.map((education) => {
     return(
-      <div className="education-container small-12 medium-12 large-12 columns">
-        <h3>Education</h3>
-        <EducationTile />
+      <EducationTile
+        name={education.name}
+        location={education.location}
+        dates={education.dates}
+        degree={education.degree}
+        study={education.study}
+      />
+    )
+  })
+    return(
+      <div className="education-container small-12 medium-12 large-10 medium-centered large-centered columns">
+        <center><h3>Education</h3>
+        <div id='up-button'>
+          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+        </div></center>
+        {education}
       </div>
     )
-  }
 }
 
 export default EducationContainer;

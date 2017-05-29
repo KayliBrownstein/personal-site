@@ -9,7 +9,10 @@ const Connect = props => {
         <div className="connect-anchor">
         </div>
       </ScrollableAnchor>
-      <h1>Connect With Me</h1>
+      <center><h1>Connect</h1>
+      <div id='up-button'>
+        <i className="fa fa-chevron-up" aria-hidden="true"></i>
+      </div></center>
       <div id="connect-icons">
         <a href="https://github.com/kaylibrownstein" target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" id="github-connect-image" className="small-12 medium-5 large-5 columns"/></a>
         <a href="https://linkedin.com/in/kaylibrownstein" target="_blank"><img src="https://educazur.fr/wp-content/uploads/2017/03/logo-linkedin-blanc.png" id="linkedin-connect-image" className="small-12 medium-5 large-5 columns"/></a>

@@ -54,6 +54,7 @@
   padding: 5%;
   text-transform: uppercase;
   font-family: Times;
+  display: inline;
 }
 
 /*CONTACT CONTAINER*/
@@ -79,12 +80,6 @@
   color: black;
   margin: 10%;
   text-align: center;
-}
-
-/*RESUME*/
-
-.resume-container {
-  background-color: #BCD8BF;
 }
 
 /*PROJECTS CONTAINER*/
@@ -217,24 +212,71 @@
   font-size: 8px;
 }
 
+/*RESUME*/
+
+.resume-container {
+  background-color: #BCD8BF;
+}
+
 .tech-skills-container {
   text-align: center;
   padding: 5%;
 }
 
 .languages-container, .databases-container, .software-container {
-  padding: 5%;
+  padding: 7%;
+  display: block;
 }
 
-h3, h5 {
+h3 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
+  display: inline;
 }
 
 .tech-skills-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.software-skill-title {
   padding: 15px;
 }
+
+.languages-container .columns:last-child {
+  float: left !important;
+}
+
+.databases-container .columns:last-child {
+  float: left !important;
+}
+
+.software-container .columns:last-child {
+  float: left !important;
+}
+
+/*EDUCATION*/
+.education-tile, .profex-tile {
+  background-color: #F6F1DE;
+  border: solid black 1px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 15px;
+  height: 150px;
+}
+
+.education-container, .profex-container {
+  padding-bottom: 5%;
+}
+
+/*.education-right {
+  float: right;
+}*/
+#up-button {
+  display: inline;
+}
+
 
 @media only screen and (max-width: 640px) {
 
@@ -243,5 +285,10 @@ h3, h5 {
   }
   #font-awesome-icon {
     font-size: 200%;
+  }
+  .education-tile, .profex-tile {
+    margin-left: 0;
+    margin-right: 0;
+    height: 200px;
   }
 }
