@@ -1,5 +1,5 @@
 import React from 'react';
-import { configureAnchors } from 'react-scrollable-anchor';
+import { goToAnchor, configureAnchors } from 'react-scrollable-anchor';
 
 const Navbar = props => {
   configureAnchors({ keepLastAnchorHash: true });
@@ -7,11 +7,15 @@ const Navbar = props => {
   return(
     <div className ="navbar">
       <ul className="links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#resume-section">Resume</a></li>
-        <li><a href="#connect-section">Connect</a></li>
-        <li><a href="#contact-section">Contact</a></li>
+        <li onClick={(e) => goToAnchor("home", true)}>Home</li>
+
+        <li onClick={(e) => goToAnchor("projects-section", true)}>Projects</li>
+
+        <li onClick={(e) => goToAnchor("resume-section", true)}>Resume</li>
+
+        <li onClick={(e) => goToAnchor("connect-section", true)}>Connect</li>
+
+        <li onClick={(e) => goToAnchor("contact-section", true)}>Contact</li>
       </ul>
       {props.children}
     </div>

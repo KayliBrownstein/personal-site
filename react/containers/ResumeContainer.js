@@ -3,6 +3,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import TechnicalSkillsContainer from './TechnicalSkillsContainer';
 import ProfessionalExperienceContainer from './ProfessionalExperienceContainer';
 import EducationContainer from './EducationContainer';
+import { goToTop } from 'react-scrollable-anchor';
 
 class ResumeContainer extends Component {
   constructor(props){
@@ -20,9 +21,9 @@ class ResumeContainer extends Component {
           </div>
         </ScrollableAnchor>
         <center><h3>Resume</h3>
-        <div id='up-button'>
+        <button onClick={goToTop}>
           <i className="fa fa-chevron-up" aria-hidden="true"></i>
-        </div></center>
+        </button></center>
         <TechnicalSkillsContainer />
         <ProfessionalExperienceContainer />
         <EducationContainer />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import ProjectTile from '../components/ProjectTile';
+import { goToTop } from 'react-scrollable-anchor';
 
 class ProjectsContainer extends Component {
   constructor(props){
@@ -19,9 +20,9 @@ class ProjectsContainer extends Component {
         </ScrollableAnchor>
           <center>
             <h1>Projects</h1>
-            <div id='up-button'>
-              <i className="fa fa-chevron-up" aria-hidden="true"></i>
-            </div>
+              <button onClick={goToTop}>
+                <i className="fa fa-chevron-up" aria-hidden="true"></i>
+              </button>
           </center>
           <ProjectTile
             hover='Solo contributor'
