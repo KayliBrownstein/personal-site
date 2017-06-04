@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfExTile from '../components/ProfExTile';
+import { goToTop } from 'react-scrollable-anchor';
 
 const ProfessionalExperienceContainer = props =>  {
   const PROFEX = [
@@ -48,9 +49,9 @@ const ProfessionalExperienceContainer = props =>  {
     return(
       <div className="profex-container small-12 medium-8 large-8 medium-centered large-centered columns">
         <center><h3>Professional Experience</h3>
-        <div id='up-button'>
-          <i className="fa fa-chevron-up" aria-hidden="true"></i>
-        </div></center>
+          <button onClick={goToTop}>
+            <i className="fa fa-chevron-up" aria-hidden="true"></i>
+          </button></center>
         {profex}
       </div>
     )
