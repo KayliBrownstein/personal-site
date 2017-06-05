@@ -13,7 +13,7 @@ const Connect = props => {
       </ScrollableAnchor>
       <center><h1>Connect</h1>
         <button onClick={goToTop}>
-          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+          <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
       <div id="connect-icons">
         <a href="https://github.com/kaylibrownstein" target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" id="github-connect-image" className="small-12 medium-5 large-5 columns"/></a>

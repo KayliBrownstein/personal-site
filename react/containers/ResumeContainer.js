@@ -20,9 +20,9 @@ class ResumeContainer extends Component {
           <div className="resume-anchor">
           </div>
         </ScrollableAnchor>
-        <center><h3>Resume</h3>
+        <center><h1>Resume</h1>
         <button onClick={goToTop}>
-          <i className="fa fa-chevron-up" aria-hidden="true"></i>
+          <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
         <TechnicalSkillsContainer />
         <ProfessionalExperienceContainer />

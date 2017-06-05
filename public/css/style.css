@@ -31,6 +31,7 @@
 
 .connect-container {
   background-color: #93CCC6;
+  padding-top: 5%;
 }
 
 #github-connect-image {
@@ -51,10 +52,15 @@
 .connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
   color: black;
   text-align: center;
-  padding: 5%;
   text-transform: uppercase;
   font-family: Times;
   display: inline;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  padding: 10%;
 }
 
 /*CONTACT CONTAINER*/
@@ -67,7 +73,8 @@
 }
 
 .contact-container {
-  margin-bottom: 5%;
+  margin: 20px;
+  padding-top: 5%;
 }
 
 .contact-container .email-field {
@@ -85,8 +92,9 @@
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: white;
+  background-color: #FFEAAD;
   padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 #project-image {
@@ -97,7 +105,7 @@
 }
 
 .project-tile {
-  background-color: white;
+  background-color: #FFEAAD;
   /*margin-top: 1%;*/
   padding-bottom: 5%;
   width: 0%;
@@ -215,7 +223,8 @@
 /*RESUME*/
 
 .resume-container {
-  background-color: #BCD8BF;
+  background-color: white;
+    padding-top: 5%;
 }
 
 .tech-skills-container {
@@ -224,7 +233,6 @@
 }
 
 .languages-container, .databases-container, .software-container {
-  padding: 7%;
   display: block;
 }
 
@@ -270,11 +278,14 @@ h3 {
   padding-bottom: 5%;
 }
 
-/*.education-right {
-  float: right;
-}*/
 #up-button {
   display: inline;
+}
+
+#fa-up-arrow {
+  font-size: 150%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 
