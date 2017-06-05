@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
 /*NAV CONTAINER*/
 
@@ -53,7 +54,7 @@
   color: black;
   text-align: center;
   text-transform: uppercase;
-  font-family: Times;
+  font-family: 'Montserrat Alternates', sans-serif;
   display: inline;
   padding-bottom: 5px;
   padding-right: 5px;
@@ -93,8 +94,8 @@ h1 {
 
 .project-container {
   background-color: #FFEAAD;
-  padding-bottom: 5%;
-  padding-top: 5%;
+/*  padding-bottom: 5%;
+*/  padding-top: 5%;
 }
 
 #project-image {
@@ -224,7 +225,7 @@ h1 {
 
 .resume-container {
   background-color: white;
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 .tech-skills-container {
@@ -233,23 +234,31 @@ h1 {
 }
 
 .languages-container, .databases-container, .software-container {
-  display: block;
+/*  display: block;
+*/}
+
+.languages-container {
+  float: left;
+  margin-left: 16%;
 }
 
-h3 {
+.databases-container {
+  float: right;
+  margin-right: 16%;
+}
+
+#resume-header {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
   display: inline;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .tech-skills-title {
   padding-top: 5%;
   padding-bottom: 5%;
-}
-
-.software-skill-title {
-  padding: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .languages-container .columns:last-child {
@@ -286,6 +295,7 @@ h3 {
   font-size: 150%;
   padding-top: 2%;
   padding-bottom: 2%;
+  color: #0AABBA;
 }
 
 

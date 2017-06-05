@@ -12,7 +12,7 @@ const Connect = props => {
         </div>
       </ScrollableAnchor>
       <center><h1>Connect</h1>
-        <button onClick={goToTop}>
+        <button id="fa-up-arrow" onClick={goToTop}>
           <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
       <div id="connect-icons">

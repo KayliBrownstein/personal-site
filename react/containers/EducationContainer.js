@@ -30,7 +30,7 @@ const EducationContainer = props =>  {
   })
     return(
       <div className="education-container small-12 medium-12 large-10 medium-centered large-centered columns">
-        <center><h3>Education</h3></center>
+        <center><h3 id="resume-header">Education</h3></center>
         {education}
       </div>
     )

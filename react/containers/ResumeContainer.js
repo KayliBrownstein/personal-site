@@ -21,7 +21,7 @@ class ResumeContainer extends Component {
           </div>
         </ScrollableAnchor>
         <center><h1>Resume</h1>
-        <button onClick={goToTop}>
+        <button id="fa-up-arrow" onClick={goToTop}>
           <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
         <TechnicalSkillsContainer />

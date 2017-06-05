@@ -48,7 +48,7 @@ const ProfessionalExperienceContainer = props =>  {
   })
     return(
       <div className="profex-container small-12 medium-8 large-8 medium-centered large-centered columns">
-        <center><h3>Professional Experience</h3></center>
+        <center><h3 id="resume-header">Professional Experience</h3></center>
         {profex}
       </div>
     )
