@@ -116,12 +116,12 @@ const TechnicalSkillsContainer = props => {
 
       return(
       <div className="tech-skills-container small-12 medium-12 large-12 columns">
-        <h3>Technical Skills</h3>
-        <div className="languages-container small-12 medium-8 large-8 small-centered large-centered columns">
+        <center><h3 id="resume-header">Technical Skills</h3></center>
+        <div className="languages-container small-12 medium-4 large-4 columns">
         <h5 className="tech-skills-title">Languages</h5>
         {language_skills}
         </div>
-        <div className="databases-container small-12 medium-8 large-8 small-centered large-centered columns">
+        <div className="databases-container small-12 medium-4 large-4 columns">
         <h5 className="tech-skills-title">Databases</h5>
         {database_skills}
         </div>
