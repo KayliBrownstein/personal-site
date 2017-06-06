@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 
+ruby "2.2.5"
+
 gem 'sinatra'
+gem 'heroku'
 gem 'sinatra-activerecord'
 gem 'sendgrid-ruby'
+gem 'pg'
+gem 'puma'
 
 group :development, :test do
   gem 'pry'
