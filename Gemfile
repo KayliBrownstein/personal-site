@@ -5,6 +5,7 @@ ruby "2.2.5"
 gem 'sinatra'
 gem 'heroku'
 gem 'sinatra-activerecord'
+gem 'dotenv'
 gem 'sendgrid-ruby'
 gem 'pg'
 gem 'puma'
