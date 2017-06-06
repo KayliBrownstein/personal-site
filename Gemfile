@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-activerecord'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'pry'
