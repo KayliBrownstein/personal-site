@@ -1,5 +1,5 @@
-require 'sendgrid-ruby'
 require 'sinatra'
+require 'sendgrid-ruby'
 Dotenv.load
 include SendGrid
 
