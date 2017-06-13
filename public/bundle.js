@@ -21204,6 +21204,16 @@
 	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
 	          )
 	        ),
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'KayliBrownsteinResumePersonalSite.pdf', download: 'KayliBrownsteinResumePersonalSite.pdf' },
+	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true' }),
+	            'Download'
+	          )
+	        ),
 	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
 	        _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
 	        _react2.default.createElement(_EducationContainer2.default, null)
