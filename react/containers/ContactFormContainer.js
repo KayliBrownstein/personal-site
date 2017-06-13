@@ -13,7 +13,7 @@ class ContactFormContainer extends Component {
       email: '',
       success: '',
       errors: {},
-      apiError: ''
+      emailError: ''
     };
 
     this.handleSubject = this.handleSubject.bind(this);
@@ -44,7 +44,7 @@ class ContactFormContainer extends Component {
 
   validateEmailInput(input){
     if (input === "" || input === " "){
-      let newError = { emailError: "Please enter your email" }
+      let newError = { emailError: "Enter your email" }
       this.setState({ errors: Object.assign(this.state.errors, newError) })
       return false
     } else {
@@ -57,7 +57,7 @@ class ContactFormContainer extends Component {
 
   validateBodyInput(input){
     if (input === "" || input === " "){
-      let newError = { bodyError: "Please enter a message" }
+      let newError = { bodyError: "Enter a message" }
       this.setState({ errors: Object.assign(this.state.errors, newError) })
       return false
     } else {
@@ -83,19 +83,18 @@ class ContactFormContainer extends Component {
   sendEmail(formPayload){
     console.log(formPayload)
     fetch('/api/v1/contact', {
+      credentials: 'same-origin',
       method: 'POST',
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formPayload)
     })
-    .then(response => {
-      return response.json()
-    })
-    .then(response => {
-      if(response.errors){
-        let apiError
-         = response.errors[0].message
-        this.setState({ apiError: apiError, errors: {}, success: "" })
+    .then(response => response.json())
+    .then(responseData => {
+      if(responseData.errors){
+        let emailError = responseData.errors[0].message
+        this.setState({ emailError: emailError, errors: {}, success: "" })
       } else {
-        this.setState({ apiError: '', errors: {}, success: "Message sent! Thanks!" })
+        this.setState({ emailError: '', errors: {}, success: "Message sent!" })
         this.clearForm();
       }
     })
@@ -111,8 +110,8 @@ class ContactFormContainer extends Component {
         return(<li className="error" key={error}>{error}</li>)
       })
       errorDiv = <div>{errorItems}</div>
-    } else if (this.state.apiError != "") {
-      errorDiv = <div className="error">{this.state.apiError}</div>
+    } else if (this.state.emailError != "") {
+      errorDiv = <div className="error">{this.state.emailError}</div>
     }
 
     if(this.state.success != ''){

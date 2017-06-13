@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sinatra/json'
+require 'json'
 require 'dotenv'
 require 'sendgrid-ruby'
 Dotenv.load
@@ -17,7 +19,7 @@ post '/api/v1/contact' do
   to = Email.new(email: ENV['EMAIL'])
   subject = data['subject']
   content = Content.new(type: 'text/plain', value: data['body'])
-  mail = SendGrid::Mail.new(from, subject, to, content)
+  mail = Mail.new(from, subject, to, content)
 
   sendgrid = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
   response = sendgrid.client.mail._('send').post(request_body: mail.to_json)
@@ -29,5 +31,5 @@ post '/api/v1/contact' do
   end
 
   status response.status_code
-  json parsed_response_body
+  json parsed_response_body 
 end
