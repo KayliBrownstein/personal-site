@@ -20970,8 +20970,8 @@
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
+	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
 	          )
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
@@ -21194,14 +21194,14 @@
 	          'center',
 	          null,
 	          _react2.default.createElement(
-	            'h3',
+	            'h1',
 	            null,
 	            'Resume'
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
+	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
 	          )
 	        ),
 	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
@@ -21331,13 +21331,17 @@
 	    'div',
 	    { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
 	    _react2.default.createElement(
-	      'h3',
+	      'center',
 	      null,
-	      'Technical Skills'
+	      _react2.default.createElement(
+	        'h3',
+	        { id: 'resume-header' },
+	        'Technical Skills'
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'languages-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	      { className: 'languages-container small-12 medium-4 large-4 columns' },
 	      _react2.default.createElement(
 	        'h5',
 	        { className: 'tech-skills-title' },
@@ -21347,7 +21351,7 @@
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'databases-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	      { className: 'databases-container small-12 medium-4 large-4 columns' },
 	      _react2.default.createElement(
 	        'h5',
 	        { className: 'tech-skills-title' },
@@ -21389,7 +21393,7 @@
 	var LanguageTile = function LanguageTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'language-skill-tile small-2 medium-2 large-2 columns' },
+	    { className: 'language-skill-tile small-2 medium-4 large-4 columns' },
 	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
 	  );
 	};
@@ -21415,7 +21419,7 @@
 	var DatabaseTile = function DatabaseTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'database-skill-tile small-2 medium-2 large-2 columns' },
+	    { className: 'database-skill-tile small-2 medium-4 large-4 columns' },
 	    _react2.default.createElement('img', { src: props.icon, width: '100', height: '150' })
 	  );
 	};
@@ -21514,13 +21518,8 @@
 	      null,
 	      _react2.default.createElement(
 	        'h3',
-	        null,
+	        { id: 'resume-header' },
 	        'Professional Experience'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
 	      )
 	    ),
 	    profex
@@ -21640,13 +21639,8 @@
 	      null,
 	      _react2.default.createElement(
 	        'h3',
-	        null,
+	        { id: 'resume-header' },
 	        'Education'
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'up-button' },
-	        _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
 	      )
 	    ),
 	    education
@@ -21759,8 +21753,8 @@
 	      ),
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
+	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
 	      )
 	    ),
 	    _react2.default.createElement(
@@ -21832,7 +21826,7 @@
 	      email: '',
 	      success: '',
 	      errors: {},
-	      apiError: ''
+	      emailError: ''
 	    };
 
 	    _this.handleSubject = _this.handleSubject.bind(_this);
@@ -21870,7 +21864,7 @@
 	    key: 'validateEmailInput',
 	    value: function validateEmailInput(input) {
 	      if (input === "" || input === " ") {
-	        var newError = { emailError: "Please enter your email" };
+	        var newError = { emailError: "Enter your email" };
 	        this.setState({ errors: Object.assign(this.state.errors, newError) });
 	        return false;
 	      } else {
@@ -21884,7 +21878,7 @@
 	    key: 'validateBodyInput',
 	    value: function validateBodyInput(input) {
 	      if (input === "" || input === " ") {
-	        var newError = { bodyError: "Please enter a message" };
+	        var newError = { bodyError: "Enter a message" };
 	        this.setState({ errors: Object.assign(this.state.errors, newError) });
 	        return false;
 	      } else {
@@ -21920,10 +21914,10 @@
 	        return response.json();
 	      }).then(function (response) {
 	        if (response.errors) {
-	          var apiError = response.errors[0].message;
-	          _this2.setState({ apiError: apiError, errors: {}, success: "" });
+	          var emailError = response.errors[0].message;
+	          _this2.setState({ emailError: emailError, errors: {}, success: "" });
 	        } else {
-	          _this2.setState({ apiError: '', errors: {}, success: "Message sent! Thanks!" });
+	          _this2.setState({ emailError: '', errors: {}, success: "Message sent!" });
 	          _this2.clearForm();
 	        }
 	      });
@@ -21948,11 +21942,11 @@
 	          null,
 	          errorItems
 	        );
-	      } else if (this.state.apiError != "") {
+	      } else if (this.state.emailError != "") {
 	        errorDiv = _react2.default.createElement(
 	          'div',
 	          { className: 'error' },
-	          this.state.apiError
+	          this.state.emailError
 	        );
 	      }
 
@@ -21982,8 +21976,8 @@
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-chevron-up', 'aria-hidden': 'true' })
+	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
 	          )
 	        ),
 	        _react2.default.createElement(
