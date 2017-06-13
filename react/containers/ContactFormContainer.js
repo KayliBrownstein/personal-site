@@ -83,16 +83,15 @@ class ContactFormContainer extends Component {
   sendEmail(formPayload){
     console.log(formPayload)
     fetch('/api/v1/contact', {
+      credentials: 'same-origin',
       method: 'POST',
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formPayload)
     })
-    .then(response => {
-      return response.json()
-    })
-    .then(response => {
-      if(response.errors){
-        let emailError
-         = response.errors[0].message
+    .then(response => response.json())
+    .then(responseData => {
+      if(responseData.errors){
+        let emailError = responseData.errors[0].message
         this.setState({ emailError: emailError, errors: {}, success: "" })
       } else {
         this.setState({ emailError: '', errors: {}, success: "Message sent!" })

@@ -21908,13 +21908,15 @@
 
 	      console.log(formPayload);
 	      fetch('/api/v1/contact', {
+	        credentials: 'same-origin',
 	        method: 'POST',
+	        headers: { "Content-Type": "application/json" },
 	        body: JSON.stringify(formPayload)
 	      }).then(function (response) {
 	        return response.json();
-	      }).then(function (response) {
-	        if (response.errors) {
-	          var emailError = response.errors[0].message;
+	      }).then(function (responseData) {
+	        if (responseData.errors) {
+	          var emailError = responseData.errors[0].message;
 	          _this2.setState({ emailError: emailError, errors: {}, success: "" });
 	        } else {
 	          _this2.setState({ emailError: '', errors: {}, success: "Message sent!" });
