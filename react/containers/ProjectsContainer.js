@@ -20,8 +20,8 @@ class ProjectsContainer extends Component {
         </ScrollableAnchor>
           <center>
             <h1>Projects</h1>
-              <button onClick={goToTop}>
-                <i className="fa fa-chevron-up" aria-hidden="true"></i>
+              <button id="fa-up-arrow" onClick={goToTop}>
+                <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
               </button>
           </center>
           <ProjectTile

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
 /*NAV CONTAINER*/
 
@@ -31,6 +32,7 @@
 
 .connect-container {
   background-color: #93CCC6;
+  padding-top: 5%;
 }
 
 #github-connect-image {
@@ -51,10 +53,15 @@
 .connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
   color: black;
   text-align: center;
-  padding: 5%;
   text-transform: uppercase;
-  font-family: Times;
+  font-family: 'Montserrat Alternates', sans-serif;
   display: inline;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  padding: 10%;
 }
 
 /*CONTACT CONTAINER*/
@@ -67,7 +74,8 @@
 }
 
 .contact-container {
-  margin-bottom: 5%;
+  margin: 20px;
+  padding-top: 5%;
 }
 
 .contact-container .email-field {
@@ -85,8 +93,9 @@
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: white;
-  padding-bottom: 5%;
+  background-color: #FFEAAD;
+/*  padding-bottom: 5%;
+*/  padding-top: 5%;
 }
 
 #project-image {
@@ -97,7 +106,7 @@
 }
 
 .project-tile {
-  background-color: white;
+  background-color: #FFEAAD;
   /*margin-top: 1%;*/
   padding-bottom: 5%;
   width: 0%;
@@ -215,7 +224,8 @@
 /*RESUME*/
 
 .resume-container {
-  background-color: #BCD8BF;
+  background-color: white;
+  padding-top: 5%;
 }
 
 .tech-skills-container {
@@ -224,24 +234,31 @@
 }
 
 .languages-container, .databases-container, .software-container {
-  padding: 7%;
-  display: block;
+/*  display: block;
+*/}
+
+.languages-container {
+  float: left;
+  margin-left: 16%;
 }
 
-h3 {
+.databases-container {
+  float: right;
+  margin-right: 16%;
+}
+
+#resume-header {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
   display: inline;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .tech-skills-title {
   padding-top: 5%;
   padding-bottom: 5%;
-}
-
-.software-skill-title {
-  padding: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .languages-container .columns:last-child {
@@ -270,11 +287,15 @@ h3 {
   padding-bottom: 5%;
 }
 
-/*.education-right {
-  float: right;
-}*/
 #up-button {
   display: inline;
+}
+
+#fa-up-arrow {
+  font-size: 150%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #0AABBA;
 }
 
 
