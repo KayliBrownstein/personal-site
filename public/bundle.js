@@ -21826,7 +21826,7 @@
 	      email: '',
 	      success: '',
 	      errors: {},
-	      apiError: ''
+	      emailError: ''
 	    };
 
 	    _this.handleSubject = _this.handleSubject.bind(_this);
@@ -21864,7 +21864,7 @@
 	    key: 'validateEmailInput',
 	    value: function validateEmailInput(input) {
 	      if (input === "" || input === " ") {
-	        var newError = { emailError: "Please enter your email" };
+	        var newError = { emailError: "Enter your email" };
 	        this.setState({ errors: Object.assign(this.state.errors, newError) });
 	        return false;
 	      } else {
@@ -21878,7 +21878,7 @@
 	    key: 'validateBodyInput',
 	    value: function validateBodyInput(input) {
 	      if (input === "" || input === " ") {
-	        var newError = { bodyError: "Please enter a message" };
+	        var newError = { bodyError: "Enter a message" };
 	        this.setState({ errors: Object.assign(this.state.errors, newError) });
 	        return false;
 	      } else {
@@ -21908,16 +21908,18 @@
 
 	      console.log(formPayload);
 	      fetch('/api/v1/contact', {
+	        credentials: 'same-origin',
 	        method: 'POST',
+	        headers: { "Content-Type": "application/json" },
 	        body: JSON.stringify(formPayload)
 	      }).then(function (response) {
 	        return response.json();
-	      }).then(function (response) {
-	        if (response.errors) {
-	          var apiError = response.errors[0].message;
-	          _this2.setState({ apiError: apiError, errors: {}, success: "" });
+	      }).then(function (responseData) {
+	        if (responseData.errors) {
+	          var emailError = responseData.errors[0].message;
+	          _this2.setState({ emailError: emailError, errors: {}, success: "" });
 	        } else {
-	          _this2.setState({ apiError: '', errors: {}, success: "Message sent! Thanks!" });
+	          _this2.setState({ emailError: '', errors: {}, success: "Message sent!" });
 	          _this2.clearForm();
 	        }
 	      });
@@ -21942,11 +21944,11 @@
 	          null,
 	          errorItems
 	        );
-	      } else if (this.state.apiError != "") {
+	      } else if (this.state.emailError != "") {
 	        errorDiv = _react2.default.createElement(
 	          'div',
 	          { className: 'error' },
-	          this.state.apiError
+	          this.state.emailError
 	        );
 	      }
 
