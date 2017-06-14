@@ -3,7 +3,7 @@ import Home from './Home';
 import ProjectsContainer from '../containers/ProjectsContainer';
 import ResumeContainer from '../containers/ResumeContainer';
 import Connect from './Connect';
-import ContactFormContainer from '../containers/ContactFormContainer';
+import ContactTile from './ContactTile';
 
 const Body = props => {
   return(
@@ -12,7 +12,7 @@ const Body = props => {
       <ProjectsContainer />
       <ResumeContainer />
       <Connect />
-      <ContactFormContainer />
+      <ContactTile />
     </div>
   )
 }
