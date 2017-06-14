@@ -24,9 +24,12 @@ class ResumeContainer extends Component {
         <button id="fa-up-arrow" onClick={goToTop}>
           <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
-        <center><a href="KayliBrownsteinResumePersonalSite.pdf" download="KayliBrownsteinResumePersonalSite.pdf"><i className="fa fa-download" aria-hidden="true"></i>Download</a></center>
+        <center><a href="KayliBrownsteinResumePersonalSite.pdf" download="KayliBrownsteinResumePersonalSite.pdf"><i className="fa fa-download" aria-hidden="true" id="download-icon"></i>Download</a></center>
+        <hr />
         <TechnicalSkillsContainer />
+        <hr />
         <ProfessionalExperienceContainer />
+        <hr />
         <EducationContainer />
       </div>
     )

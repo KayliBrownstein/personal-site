@@ -4,7 +4,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import { goToTop } from 'react-scrollable-anchor';
 
 
-const Connect = props => {
+const ConnectTile = props => {
   return(
     <div className="connect-container column">
       <ScrollableAnchor id={'connect-section'}>
@@ -23,4 +23,4 @@ const Connect = props => {
   )
 }
 
-export default Connect;
+export default ConnectTile;

@@ -20842,13 +20842,13 @@
 
 	var _ResumeContainer2 = _interopRequireDefault(_ResumeContainer);
 
-	var _Connect = __webpack_require__(190);
+	var _ConnectTile = __webpack_require__(192);
 
-	var _Connect2 = _interopRequireDefault(_Connect);
+	var _ConnectTile2 = _interopRequireDefault(_ConnectTile);
 
-	var _ContactFormContainer = __webpack_require__(193);
+	var _ContactTile = __webpack_require__(191);
 
-	var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
+	var _ContactTile2 = _interopRequireDefault(_ContactTile);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20859,8 +20859,8 @@
 	    _react2.default.createElement(_Home2.default, null),
 	    _react2.default.createElement(_ProjectsContainer2.default, null),
 	    _react2.default.createElement(_ResumeContainer2.default, null),
-	    _react2.default.createElement(_Connect2.default, null),
-	    _react2.default.createElement(_ContactFormContainer2.default, null)
+	    _react2.default.createElement(_ConnectTile2.default, null),
+	    _react2.default.createElement(_ContactTile2.default, null)
 	  );
 	};
 
@@ -21210,12 +21210,15 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: 'KayliBrownsteinResumePersonalSite.pdf', download: 'KayliBrownsteinResumePersonalSite.pdf' },
-	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true' }),
+	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true', id: 'download-icon' }),
 	            'Download'
 	          )
 	        ),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_EducationContainer2.default, null)
 	      );
 	    }
@@ -21721,7 +21724,8 @@
 	exports.default = EducationTile;
 
 /***/ },
-/* 190 */
+/* 190 */,
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21744,7 +21748,75 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Connect = function Connect(props) {
+	var ContactTile = function ContactTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'contact-container column' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'contact-section' },
+	      _react2.default.createElement('div', { className: 'contact-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Contact'
+	      ),
+	      _react2.default.createElement(
+	        'button',
+	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'contact-info' },
+	      _react2.default.createElement(
+	        'span',
+	        { id: 'email-info' },
+	        _react2.default.createElement('i', { className: 'fa fa-envelope-o', 'aria-hidden': 'true', id: 'email-icon' }),
+	        'kaylivbrownstein@gmail.com'
+	      ),
+	      _react2.default.createElement(
+	        'span',
+	        { id: 'location-info' },
+	        _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true', id: 'map-icon' }),
+	        'Boston, MA'
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ContactTile;
+
+/***/ },
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Home = __webpack_require__(178);
+
+	var _Home2 = _interopRequireDefault(_Home);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ConnectTile = function ConnectTile(props) {
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'connect-container column' },
@@ -21784,320 +21856,7 @@
 	  );
 	};
 
-	exports.default = Connect;
-
-/***/ },
-/* 191 */,
-/* 192 */,
-/* 193 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	var _SubjectField = __webpack_require__(194);
-
-	var _SubjectField2 = _interopRequireDefault(_SubjectField);
-
-	var _BodyField = __webpack_require__(195);
-
-	var _BodyField2 = _interopRequireDefault(_BodyField);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ContactFormContainer = function (_Component) {
-	  _inherits(ContactFormContainer, _Component);
-
-	  function ContactFormContainer(props) {
-	    _classCallCheck(this, ContactFormContainer);
-
-	    var _this = _possibleConstructorReturn(this, (ContactFormContainer.__proto__ || Object.getPrototypeOf(ContactFormContainer)).call(this, props));
-
-	    _this.state = {
-	      subject: '',
-	      body: '',
-	      email: '',
-	      success: '',
-	      errors: {},
-	      emailError: ''
-	    };
-
-	    _this.handleSubject = _this.handleSubject.bind(_this);
-	    _this.handleBody = _this.handleBody.bind(_this);
-	    _this.handleFormSubmit = _this.handleFormSubmit.bind(_this);
-	    _this.sendEmail = _this.sendEmail.bind(_this);
-	    _this.handleEmail = _this.handleEmail.bind(_this);
-	    _this.clearForm = _this.clearForm.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(ContactFormContainer, [{
-	    key: 'handleSubject',
-	    value: function handleSubject(event) {
-	      this.setState({ subject: event.target.value });
-	    }
-	  }, {
-	    key: 'handleBody',
-	    value: function handleBody(event) {
-	      this.validateBodyInput(event.target.value);
-	      this.setState({ body: event.target.value });
-	    }
-	  }, {
-	    key: 'handleEmail',
-	    value: function handleEmail(event) {
-	      this.validateEmailInput(event.target.value);
-	      this.setState({ email: event.target.value });
-	    }
-	  }, {
-	    key: 'clearForm',
-	    value: function clearForm() {
-	      this.setState({ subject: '', body: '', email: '' });
-	    }
-	  }, {
-	    key: 'validateEmailInput',
-	    value: function validateEmailInput(input) {
-	      if (input === "" || input === " ") {
-	        var newError = { emailError: "Enter your email" };
-	        this.setState({ errors: Object.assign(this.state.errors, newError) });
-	        return false;
-	      } else {
-	        var errorState = this.state.errors;
-	        delete errorState.emailError;
-	        this.setState({ errors: errorState });
-	        return true;
-	      }
-	    }
-	  }, {
-	    key: 'validateBodyInput',
-	    value: function validateBodyInput(input) {
-	      if (input === "" || input === " ") {
-	        var newError = { bodyError: "Enter a message" };
-	        this.setState({ errors: Object.assign(this.state.errors, newError) });
-	        return false;
-	      } else {
-	        var errorState = this.state.errors;
-	        delete errorState.bodyError;
-	        this.setState({ errors: errorState });
-	        return true;
-	      }
-	    }
-	  }, {
-	    key: 'handleFormSubmit',
-	    value: function handleFormSubmit(event) {
-	      event.preventDefault();
-	      if (this.validateEmailInput(this.state.email) && this.validateBodyInput(this.state.body)) {
-	        var formPayload = {
-	          subject: this.state.subject,
-	          body: this.state.body,
-	          email: this.state.email
-	        };
-	        this.sendEmail(formPayload);
-	      }
-	    }
-	  }, {
-	    key: 'sendEmail',
-	    value: function sendEmail(formPayload) {
-	      var _this2 = this;
-
-	      console.log(formPayload);
-	      fetch('/api/v1/contact', {
-	        credentials: 'same-origin',
-	        method: 'POST',
-	        headers: { "Content-Type": "application/json" },
-	        body: JSON.stringify(formPayload)
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (responseData) {
-	        if (responseData.errors) {
-	          var emailError = responseData.errors[0].message;
-	          _this2.setState({ emailError: emailError, errors: {}, success: "" });
-	        } else {
-	          _this2.setState({ emailError: '', errors: {}, success: "Message sent!" });
-	          _this2.clearForm();
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var errorDiv = void 0;
-	      var errorItems = void 0;
-	      var successSpan = void 0;
-
-	      if (Object.keys(this.state.errors).length > 0) {
-	        errorItems = Object.values(this.state.errors).map(function (error) {
-	          return _react2.default.createElement(
-	            'li',
-	            { className: 'error', key: error },
-	            error
-	          );
-	        });
-	        errorDiv = _react2.default.createElement(
-	          'div',
-	          null,
-	          errorItems
-	        );
-	      } else if (this.state.emailError != "") {
-	        errorDiv = _react2.default.createElement(
-	          'div',
-	          { className: 'error' },
-	          this.state.emailError
-	        );
-	      }
-
-	      if (this.state.success != '') {
-	        successSpan = _react2.default.createElement(
-	          'span',
-	          { className: 'success' },
-	          this.state.success
-	        );
-	      }
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'contact-container small-12 large-6 large-centered columns' },
-	        _react2.default.createElement(
-	          _reactScrollableAnchor2.default,
-	          { id: 'contact-section' },
-	          _react2.default.createElement('div', { className: 'contact-anchor' })
-	        ),
-	        _react2.default.createElement(
-	          'center',
-	          null,
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Contact'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'form',
-	          { onSubmit: this.handleFormSubmit },
-	          _react2.default.createElement(_SubjectField2.default, {
-	            name: 'email',
-	            label: 'Email',
-	            id: 'email',
-	            placeholder: 'Your Email',
-	            content: this.state.email,
-	            handlerFunction: this.handleEmail
-	          }),
-	          _react2.default.createElement(_SubjectField2.default, {
-	            name: 'subject',
-	            label: 'Subject',
-	            id: 'subject',
-	            placeholder: 'I would like to discuss...',
-	            content: this.state.subject,
-	            handlerFunction: this.handleSubject
-	          }),
-	          _react2.default.createElement(_BodyField2.default, {
-	            name: 'body',
-	            label: 'Body',
-	            placeholder: 'I wanted to say...',
-	            content: this.state.body,
-	            handlerFunction: this.handleBody
-	          }),
-	          errorDiv,
-	          _react2.default.createElement(
-	            'center',
-	            null,
-	            _react2.default.createElement('input', { className: 'submit-button button', type: 'submit', value: 'Send' })
-	          ),
-	          successSpan
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ContactFormContainer;
-	}(_react.Component);
-
-	;
-
-	exports.default = ContactFormContainer;
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SubjectField = function SubjectField(props) {
-	  return _react2.default.createElement('input', {
-	    name: props.name,
-	    type: 'text',
-	    id: props.id,
-	    onChange: props.handlerFunction,
-	    value: props.content,
-	    placeholder: props.placeholder,
-	    className: 'email-field'
-	  });
-	};
-
-	exports.default = SubjectField;
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var BodyField = function BodyField(props) {
-	  return _react2.default.createElement('textarea', {
-	    label: props.label,
-	    type: 'text',
-	    name: props.name,
-	    onChange: props.handlerFunction,
-	    value: props.content,
-	    placeholder: props.placeholder,
-	    className: 'email-field'
-	  });
-	};
-
-	exports.default = BodyField;
+	exports.default = ConnectTile;
 
 /***/ }
 /******/ ]);
