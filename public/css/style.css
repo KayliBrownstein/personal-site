@@ -32,7 +32,7 @@
 
 .connect-container {
   background-color: #93CCC6;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 #github-connect-image {
@@ -46,8 +46,9 @@
 }
 
 #connect-icons {
-  margin: 25%;
-  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 5px;
 }
 
 .connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
@@ -67,8 +68,7 @@ h1 {
 /*CONTACT CONTAINER*/
 
 .contact-container {
-  margin: 20px;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 5%;
 }
 
@@ -96,8 +96,7 @@ h1 {
 
 .project-container {
   background-color: #FFEAAD;
-/*  padding-bottom: 5%;
-*/  padding-top: 5%;
+  padding-top: 2%;
 }
 
 #project-image {
@@ -227,7 +226,7 @@ h1 {
 
 .resume-container {
   background-color: white;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 #download-icon {
@@ -236,7 +235,7 @@ h1 {
 
 .tech-skills-container {
   text-align: center;
-  padding: 5%;
+  padding: 2%;
 }
 
 .languages-container, .databases-container, .software-container {
@@ -256,7 +255,6 @@ h1 {
 #resume-header {
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 20px;
   display: inline;
   font-family: 'Montserrat Alternates', sans-serif;
 }
