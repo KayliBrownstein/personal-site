@@ -18,12 +18,14 @@ class ProjectsContainer extends Component {
           <div className="projects-anchor">
           </div>
         </ScrollableAnchor>
+        <div id="color-strip">
           <center>
             <h1>Projects</h1>
               <button id="fa-up-arrow" onClick={goToTop}>
                 <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
               </button>
           </center>
+        </div>
           <ProjectTile
             hover='Solo contributor'
             collabIcon={<i className="fa fa-user" aria-hidden="true"></i>}

@@ -20889,7 +20889,16 @@
 	var Home = function Home(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'home-container' },
+	    { className: 'home-container small-12 medium-12 large-10 medium-centered large-centered columns' },
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        'About'
+	      )
+	    ),
 	    _react2.default.createElement(
 	      'p',
 	      null,
@@ -20961,17 +20970,21 @@
 	          _react2.default.createElement('div', { className: 'projects-anchor' })
 	        ),
 	        _react2.default.createElement(
-	          'center',
-	          null,
+	          'div',
+	          { id: 'color-strip' },
 	          _react2.default.createElement(
-	            'h1',
+	            'center',
 	            null,
-	            'Projects'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Projects'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
@@ -21191,17 +21204,21 @@
 	          _react2.default.createElement('div', { className: 'resume-anchor' })
 	        ),
 	        _react2.default.createElement(
-	          'center',
-	          null,
+	          'div',
+	          { id: 'color-strip' },
 	          _react2.default.createElement(
-	            'h1',
+	            'center',
 	            null,
-	            'Resume'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Resume'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -21757,17 +21774,21 @@
 	      _react2.default.createElement('div', { className: 'connect-anchor' })
 	    ),
 	    _react2.default.createElement(
-	      'center',
-	      null,
+	      'div',
+	      { id: 'color-strip' },
 	      _react2.default.createElement(
-	        'h1',
+	        'center',
 	        null,
-	        'Connect'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Connect'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(
@@ -21823,17 +21844,21 @@
 	      _react2.default.createElement('div', { className: 'contact-anchor' })
 	    ),
 	    _react2.default.createElement(
-	      'center',
-	      null,
+	      'div',
+	      { id: 'color-strip' },
 	      _react2.default.createElement(
-	        'h1',
+	        'center',
 	        null,
-	        'Contact'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Contact'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(

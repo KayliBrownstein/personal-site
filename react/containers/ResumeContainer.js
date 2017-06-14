@@ -20,10 +20,12 @@ class ResumeContainer extends Component {
           <div className="resume-anchor">
           </div>
         </ScrollableAnchor>
+        <div id="color-strip">
         <center><h1>Resume</h1>
         <button id="fa-up-arrow" onClick={goToTop}>
           <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </button></center>
+        </div>
         <center><a href="KayliBrownsteinResumePersonalSite.pdf" download="KayliBrownsteinResumePersonalSite.pdf"><i className="fa fa-download" aria-hidden="true" id="download-icon"></i>Download</a></center>
         <hr />
         <TechnicalSkillsContainer />
