@@ -20361,7 +20361,7 @@
 	        { onClick: function onClick(e) {
 	            return (0, _reactScrollableAnchor.goToAnchor)("home", true);
 	          } },
-	        'Home'
+	        _react2.default.createElement('img', { src: 'placeholder.png', width: '60', height: '60' })
 	      ),
 	      _react2.default.createElement(
 	        'li',

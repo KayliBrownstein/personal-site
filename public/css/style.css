@@ -5,8 +5,15 @@
 /*NAV CONTAINER*/
 
 .navbar {
-  margin: 3%;
+  background-color: #6CBDB5;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 7;
+  padding: 6px;
+  font-weight: bold;
 }
+
 .navbar .links {
   margin-left: 2%;
   text-align: center;
@@ -14,7 +21,7 @@
 .navbar .links li {
   display: inline;
   margin-right: 5%;
-  margin-top: 2%;
+  /*margin-top: 2%;*/
 }
 .navbar .links li a {
   text-decoration: none;
@@ -88,7 +95,7 @@ h1 {
 
 .home-container p {
   color: black;
-  margin: 10%;
+  margin-bottom: 10%;
   text-align: center;
 }
 
@@ -279,7 +286,7 @@ h1 {
 
 /*EDUCATION*/
 .education-tile, .profex-tile {
-  background-color: #F6F1DE;
+  background-color: #FFEAAD;
   border: solid black 1px;
   margin-top: 4%;
   margin-bottom: 4%;
