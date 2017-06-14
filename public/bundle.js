@@ -21773,12 +21773,12 @@
 	      _react2.default.createElement(
 	        'a',
 	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      ),
 	      _react2.default.createElement(
 	        'a',
 	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'http://www.logoeps.com/wp-content/uploads/2014/07/linkedin-icon-vector.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
 	      )
 	    )
 	  );
