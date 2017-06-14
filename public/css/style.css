@@ -66,20 +66,21 @@ h1 {
 
 /*CONTACT CONTAINER*/
 
-.contact-container .button {
-  background-color: white;
-  border: solid black 1px;
-  color: black;
-  width: 30%;
-}
-
 .contact-container {
   margin: 20px;
   padding-top: 5%;
 }
 
-.contact-container .email-field {
-  background-color: #E8E8E8;
+#contact-info {
+  text-align: center;
+}
+
+#email-icon, #map-icon {
+  margin: 5px;
+}
+
+#email-info, #location-info {
+  margin: 5%;
 }
 
 /*HOME CONTAINER */
@@ -226,6 +227,10 @@ h1 {
 .resume-container {
   background-color: white;
   padding-top: 5%;
+}
+
+#download-icon {
+  padding: 5px;
 }
 
 .tech-skills-container {

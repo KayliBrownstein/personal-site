@@ -21210,12 +21210,15 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: 'KayliBrownsteinResumePersonalSite.pdf', download: 'KayliBrownsteinResumePersonalSite.pdf' },
-	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true' }),
+	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true', id: 'download-icon' }),
 	            'Download'
 	          )
 	        ),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_EducationContainer2.default, null)
 	      );
 	    }
@@ -21831,6 +21834,22 @@
 	        'button',
 	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
 	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'contact-info' },
+	      _react2.default.createElement(
+	        'span',
+	        { id: 'email-info' },
+	        _react2.default.createElement('i', { className: 'fa fa-envelope-o', 'aria-hidden': 'true', id: 'email-icon' }),
+	        'kaylivbrownstein@gmail.com'
+	      ),
+	      _react2.default.createElement(
+	        'span',
+	        { id: 'location-info' },
+	        _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true', id: 'map-icon' }),
+	        'Boston, MA'
 	      )
 	    )
 	  );
