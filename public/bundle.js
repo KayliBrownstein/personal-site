@@ -20842,9 +20842,9 @@
 
 	var _ResumeContainer2 = _interopRequireDefault(_ResumeContainer);
 
-	var _Connect = __webpack_require__(190);
+	var _ConnectTile = __webpack_require__(192);
 
-	var _Connect2 = _interopRequireDefault(_Connect);
+	var _ConnectTile2 = _interopRequireDefault(_ConnectTile);
 
 	var _ContactTile = __webpack_require__(191);
 
@@ -20859,7 +20859,7 @@
 	    _react2.default.createElement(_Home2.default, null),
 	    _react2.default.createElement(_ProjectsContainer2.default, null),
 	    _react2.default.createElement(_ResumeContainer2.default, null),
-	    _react2.default.createElement(_Connect2.default, null),
+	    _react2.default.createElement(_ConnectTile2.default, null),
 	    _react2.default.createElement(_ContactTile2.default, null)
 	  );
 	};
@@ -21724,72 +21724,7 @@
 	exports.default = EducationTile;
 
 /***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Home = __webpack_require__(178);
-
-	var _Home2 = _interopRequireDefault(_Home);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Connect = function Connect(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'connect-container column' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'connect-section' },
-	      _react2.default.createElement('div', { className: 'connect-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Connect'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'connect-icons' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
-	      ),
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
-	      )
-	    )
-	  );
-	};
-
-	exports.default = Connect;
-
-/***/ },
+/* 190 */,
 /* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21856,6 +21791,72 @@
 	};
 
 	exports.default = ContactTile;
+
+/***/ },
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Home = __webpack_require__(178);
+
+	var _Home2 = _interopRequireDefault(_Home);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ConnectTile = function ConnectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'connect-container column' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'connect-section' },
+	      _react2.default.createElement('div', { className: 'connect-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'center',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Connect'
+	      ),
+	      _react2.default.createElement(
+	        'button',
+	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'connect-icons' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ConnectTile;
 
 /***/ }
 /******/ ]);

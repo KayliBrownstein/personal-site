@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './Home';
 import ProjectsContainer from '../containers/ProjectsContainer';
 import ResumeContainer from '../containers/ResumeContainer';
-import Connect from './Connect';
+import ConnectTile from './ConnectTile';
 import ContactTile from './ContactTile';
 
 const Body = props => {
@@ -11,7 +11,7 @@ const Body = props => {
       <Home />
       <ProjectsContainer />
       <ResumeContainer />
-      <Connect />
+      <ConnectTile />
       <ContactTile />
     </div>
   )
