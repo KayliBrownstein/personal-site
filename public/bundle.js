@@ -20390,6 +20390,13 @@
 	            return (0, _reactScrollableAnchor.goToAnchor)("contact-section", true);
 	          } },
 	        'Contact'
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        { onClick: function onClick(e) {
+	            return (0, _reactScrollableAnchor.goToAnchor)("swanson-section", true);
+	          } },
+	        'Swansonator'
 	      )
 	    ),
 	    props.children
@@ -20850,6 +20857,10 @@
 
 	var _ContactTile2 = _interopRequireDefault(_ContactTile);
 
+	var _SwansonContainer = __webpack_require__(192);
+
+	var _SwansonContainer2 = _interopRequireDefault(_SwansonContainer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Body = function Body(props) {
@@ -20860,7 +20871,8 @@
 	    _react2.default.createElement(_ProjectsContainer2.default, null),
 	    _react2.default.createElement(_ResumeContainer2.default, null),
 	    _react2.default.createElement(_ConnectTile2.default, null),
-	    _react2.default.createElement(_ContactTile2.default, null)
+	    _react2.default.createElement(_ContactTile2.default, null),
+	    _react2.default.createElement(_SwansonContainer2.default, null)
 	  );
 	};
 
@@ -21910,6 +21922,147 @@
 	};
 
 	exports.default = ContactTile;
+
+/***/ },
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	var _SwansonTile = __webpack_require__(193);
+
+	var _SwansonTile2 = _interopRequireDefault(_SwansonTile);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SwansonContainer = function (_Component) {
+	  _inherits(SwansonContainer, _Component);
+
+	  function SwansonContainer(props) {
+	    _classCallCheck(this, SwansonContainer);
+
+	    var _this = _possibleConstructorReturn(this, (SwansonContainer.__proto__ || Object.getPrototypeOf(SwansonContainer)).call(this, props));
+
+	    _this.state = {
+	      quote: ''
+	    };
+	    return _this;
+	  }
+
+	  _createClass(SwansonContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/quotes").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({ quote: responseData.quote });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'row collapse' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'resume-container small-12 medium-12 large-12 columns' },
+	          _react2.default.createElement(
+	            _reactScrollableAnchor2.default,
+	            { id: 'resume-section' },
+	            _react2.default.createElement('div', { className: 'resume-anchor' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'color-strip' },
+	            _react2.default.createElement(
+	              'center',
+	              null,
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Swansonator'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	                _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(_SwansonTile2.default, {
+	            quote: this.state.quote
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return SwansonContainer;
+	}(_react.Component);
+
+	exports.default = SwansonContainer;
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SwansonTile = function SwansonTile(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "swanson-tile small-12 medium-12 large-12 columns" },
+	    _react2.default.createElement(
+	      "p",
+	      null,
+	      props.quote
+	    ),
+	    _react2.default.createElement(
+	      "center",
+	      null,
+	      _react2.default.createElement(
+	        "button",
+	        { onClick: props.handleClick },
+	        "Click here for a new Ron Swanson quote"
+	      )
+	    )
+	  );
+	};
+
+	exports.default = SwansonTile;
 
 /***/ }
 /******/ ]);

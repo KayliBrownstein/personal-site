@@ -4,6 +4,7 @@ import ProjectsContainer from '../containers/ProjectsContainer';
 import ResumeContainer from '../containers/ResumeContainer';
 import ConnectTile from './ConnectTile';
 import ContactTile from './ContactTile';
+import SwansonContainer from '../containers/SwansonContainer';
 
 const Body = props => {
   return(
@@ -13,6 +14,7 @@ const Body = props => {
       <ResumeContainer />
       <ConnectTile />
       <ContactTile />
+      <SwansonContainer />
     </div>
   )
 }

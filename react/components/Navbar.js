@@ -12,6 +12,7 @@ const Navbar = props => {
         <li onClick={(e) => goToAnchor("resume-section", true)}>Resume</li>
         <li onClick={(e) => goToAnchor("connect-section", true)}>Connect</li>
         <li onClick={(e) => goToAnchor("contact-section", true)}>Contact</li>
+        <li onClick={(e) => goToAnchor("swanson-section", true)}>Swansonator</li>
       </ul>
       {props.children}
     </div>
