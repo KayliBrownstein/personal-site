@@ -7,8 +7,6 @@ gem 'heroku'
 gem 'sinatra-activerecord'
 gem 'sinatra-json'
 gem 'json'
-gem 'dotenv'
-gem 'sendgrid-ruby'
 gem 'pg'
 gem 'puma'
 
