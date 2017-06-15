@@ -22060,9 +22060,18 @@
 	    "div",
 	    { className: "swanson-tile small-12 medium-12 large-12 columns" },
 	    _react2.default.createElement(
-	      "p",
+	      "center",
 	      null,
-	      props.quote
+	      _react2.default.createElement("img", { src: "https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F93286f67-e48d-438f-8609-ac2d4e8feb29.jpg", id: "swanson-image" })
+	    ),
+	    _react2.default.createElement(
+	      "center",
+	      null,
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        props.quote
+	      )
 	    ),
 	    _react2.default.createElement(
 	      "center",

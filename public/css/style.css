@@ -16,6 +16,10 @@
   margin-left: 0;
 }
 
+#swanson-image {
+  height: 120px;
+}
+
 /*NAV CONTAINER*/
 
 .navbar {
