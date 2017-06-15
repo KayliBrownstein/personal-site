@@ -22070,7 +22070,7 @@
 	      _react2.default.createElement(
 	        "div",
 	        { className: "button", onClick: props.handleClick },
-	        "Click here for a new Ron Swanson quote"
+	        "Next Ron Swanson quote"
 	      )
 	    )
 	  );
