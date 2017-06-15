@@ -22068,8 +22068,8 @@
 	      "center",
 	      null,
 	      _react2.default.createElement(
-	        "button",
-	        { onClick: props.handleClick },
+	        "div",
+	        { className: "button", onClick: props.handleClick },
 	        "Click here for a new Ron Swanson quote"
 	      )
 	    )
