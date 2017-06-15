@@ -7,7 +7,7 @@ const Navbar = props => {
   return(
     <div className ="navbar">
       <ul className="links">
-        <li onClick={(e) => goToAnchor("home", true)}>Home</li>
+        <li onClick={(e) => goToAnchor("home", true)}><img src="placeholder.png" width='60' height='60'/></li>
         <li onClick={(e) => goToAnchor("projects-section", true)}>Projects</li>
         <li onClick={(e) => goToAnchor("resume-section", true)}>Resume</li>
         <li onClick={(e) => goToAnchor("connect-section", true)}>Connect</li>

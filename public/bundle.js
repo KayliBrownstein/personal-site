@@ -20361,7 +20361,7 @@
 	        { onClick: function onClick(e) {
 	            return (0, _reactScrollableAnchor.goToAnchor)("home", true);
 	          } },
-	        'Home'
+	        _react2.default.createElement('img', { src: 'placeholder.png', width: '60', height: '60' })
 	      ),
 	      _react2.default.createElement(
 	        'li',
@@ -20842,7 +20842,7 @@
 
 	var _ResumeContainer2 = _interopRequireDefault(_ResumeContainer);
 
-	var _ConnectTile = __webpack_require__(192);
+	var _ConnectTile = __webpack_require__(190);
 
 	var _ConnectTile2 = _interopRequireDefault(_ConnectTile);
 
@@ -20889,7 +20889,25 @@
 	var Home = function Home(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'home-container' },
+	    { className: 'home-container small-12 medium-12 large-12 medium-centered large-centered columns' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'home' },
+	      _react2.default.createElement('div', { className: 'home-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'color-strip' },
+	      _react2.default.createElement(
+	        'center',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'About'
+	        )
+	      )
+	    ),
 	    _react2.default.createElement(
 	      'p',
 	      null,
@@ -20961,17 +20979,21 @@
 	          _react2.default.createElement('div', { className: 'projects-anchor' })
 	        ),
 	        _react2.default.createElement(
-	          'center',
-	          null,
+	          'div',
+	          { id: 'color-strip' },
 	          _react2.default.createElement(
-	            'h1',
+	            'center',
 	            null,
-	            'Projects'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Projects'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(_ProjectTile2.default, {
@@ -21191,17 +21213,21 @@
 	          _react2.default.createElement('div', { className: 'resume-anchor' })
 	        ),
 	        _react2.default.createElement(
-	          'center',
-	          null,
+	          'div',
+	          { id: 'color-strip' },
 	          _react2.default.createElement(
-	            'h1',
+	            'center',
 	            null,
-	            'Resume'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Resume'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -21724,7 +21750,76 @@
 	exports.default = EducationTile;
 
 /***/ },
-/* 190 */,
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Home = __webpack_require__(178);
+
+	var _Home2 = _interopRequireDefault(_Home);
+
+	var _reactScrollableAnchor = __webpack_require__(170);
+
+	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ConnectTile = function ConnectTile(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'connect-container column' },
+	    _react2.default.createElement(
+	      _reactScrollableAnchor2.default,
+	      { id: 'connect-section' },
+	      _react2.default.createElement('div', { className: 'connect-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'color-strip' },
+	      _react2.default.createElement(
+	        'center',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Connect'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'connect-icons' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
+	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ConnectTile;
+
+/***/ },
 /* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21758,17 +21853,21 @@
 	      _react2.default.createElement('div', { className: 'contact-anchor' })
 	    ),
 	    _react2.default.createElement(
-	      'center',
-	      null,
+	      'div',
+	      { id: 'color-strip' },
 	      _react2.default.createElement(
-	        'h1',
+	        'center',
 	        null,
-	        'Contact'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Contact'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(
@@ -21791,72 +21890,6 @@
 	};
 
 	exports.default = ContactTile;
-
-/***/ },
-/* 192 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Home = __webpack_require__(178);
-
-	var _Home2 = _interopRequireDefault(_Home);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
-
-	var _reactScrollableAnchor2 = _interopRequireDefault(_reactScrollableAnchor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var ConnectTile = function ConnectTile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'connect-container column' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'connect-section' },
-	      _react2.default.createElement('div', { className: 'connect-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Connect'
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	        _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'connect-icons' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
-	      ),
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
-	      )
-	    )
-	  );
-	};
-
-	exports.default = ConnectTile;
 
 /***/ }
 /******/ ]);
