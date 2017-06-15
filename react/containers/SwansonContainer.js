@@ -9,10 +9,20 @@ class SwansonContainer extends Component {
     this.state = {
       quote: ''
     }
+
+  this.handleClick = this.handleClick.bind(this);
   }
 
 componentDidMount(){
   fetch("/api/v1/quotes")
+    .then((response) => response.json())
+    .then((responseData) => {
+      this.setState({quote: responseData.quote})
+    })
+}
+
+handleClick(){
+    fetch("/api/v1/quotes")
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({quote: responseData.quote})
@@ -35,6 +45,7 @@ componentDidMount(){
           </div>
           <SwansonTile 
             quote={this.state.quote}
+            handleClick={this.handleClick}
           /> 
         </div>
       </div>

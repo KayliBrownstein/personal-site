@@ -21966,6 +21966,8 @@
 	    _this.state = {
 	      quote: ''
 	    };
+
+	    _this.handleClick = _this.handleClick.bind(_this);
 	    return _this;
 	  }
 
@@ -21978,6 +21980,17 @@
 	        return response.json();
 	      }).then(function (responseData) {
 	        _this2.setState({ quote: responseData.quote });
+	      });
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      var _this3 = this;
+
+	      fetch("/api/v1/quotes").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this3.setState({ quote: responseData.quote });
 	      });
 	    }
 	  }, {
@@ -22013,7 +22026,8 @@
 	            )
 	          ),
 	          _react2.default.createElement(_SwansonTile2.default, {
-	            quote: this.state.quote
+	            quote: this.state.quote,
+	            handleClick: this.handleClick
 	          })
 	        )
 	      );
