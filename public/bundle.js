@@ -20889,14 +20889,23 @@
 	var Home = function Home(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'home-container small-12 medium-12 large-10 medium-centered large-centered columns' },
+	    { className: 'home-container small-12 medium-12 large-12 medium-centered large-centered columns' },
 	    _react2.default.createElement(
-	      'center',
-	      null,
+	      _reactScrollableAnchor2.default,
+	      { id: 'home' },
+	      _react2.default.createElement('div', { className: 'home-anchor' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'color-strip' },
 	      _react2.default.createElement(
-	        'h1',
+	        'center',
 	        null,
-	        'About'
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'About'
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(

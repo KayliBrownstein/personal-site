@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pontano+Sans');
+
 
 #color-strip {
-  background-color: grey;
+  background-color: black;
   margin-left: 0;
   margin-right: 0;
 }
@@ -15,7 +18,7 @@
   position: fixed;
   height: 40px;
   width: 100%;
-  z-index: 7;
+  z-index: 150;
   padding: 6px;
   font-weight: bold;
 }
@@ -67,8 +70,7 @@
 .connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
   color: white;
   text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   display: inline;
   padding-bottom: 5px;
   padding-right: 5px;
@@ -106,9 +108,13 @@ h1 {
 }
 
 .home-container h1 {
-  padding-top: 75px;
+  padding-top: 35px;
   padding-bottom: 5px;
-}
+  color: white;
+  text-align: center;
+  font-family: 'Pontano Sans', sans-serif;
+/*  position: sticky;
+*/}
 
 /*PROJECTS CONTAINER*/
 
@@ -274,13 +280,13 @@ h1 {
   text-align: center;
   padding-top: 10px;
   display: inline;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .tech-skills-title {
   padding-top: 5%;
   padding-bottom: 5%;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .languages-container .columns:last-child {
@@ -296,6 +302,7 @@ h1 {
 }
 
 /*EDUCATION*/
+
 .education-tile, .profex-tile {
   background-color: #FFEAAD;
   border: solid black 1px;
