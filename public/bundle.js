@@ -20873,7 +20873,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+			value: true
 	});
 
 	var _react = __webpack_require__(1);
@@ -20887,38 +20887,42 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Home = function Home(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'home-container small-12 medium-12 large-12 medium-centered large-centered columns' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'home' },
-	      _react2.default.createElement('div', { className: 'home-anchor' })
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'color-strip' },
-	      _react2.default.createElement(
-	        'center',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'About'
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'Hi, I am Kayli.'
-	    ),
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'Full Stack Developer'
-	    )
-	  );
+			return _react2.default.createElement(
+					'div',
+					{ className: 'row collapse' },
+					_react2.default.createElement(
+							'div',
+							{ className: 'home-container small-12 medium-12 large-12 medium-centered large-centered columns' },
+							_react2.default.createElement(
+									_reactScrollableAnchor2.default,
+									{ id: 'home' },
+									_react2.default.createElement('div', { className: 'home-anchor' })
+							),
+							_react2.default.createElement(
+									'div',
+									{ id: 'color-strip' },
+									_react2.default.createElement(
+											'center',
+											null,
+											_react2.default.createElement(
+													'h1',
+													null,
+													'About'
+											)
+									)
+							),
+							_react2.default.createElement(
+									'p',
+									null,
+									'Hi, I am Kayli.'
+							),
+							_react2.default.createElement(
+									'p',
+									null,
+									'Full Stack Developer'
+							)
+					)
+			);
 	};
 
 	exports.default = Home;
@@ -20972,70 +20976,74 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project-container small-12 medium-12 large-12 columns' },
-	        _react2.default.createElement(
-	          _reactScrollableAnchor2.default,
-	          { id: 'projects-section' },
-	          _react2.default.createElement('div', { className: 'projects-anchor' })
-	        ),
+	        { className: 'row collapse' },
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'color-strip' },
+	          { className: 'project-container small-12 medium-12 large-12 columns' },
 	          _react2.default.createElement(
-	            'center',
-	            null,
+	            _reactScrollableAnchor2.default,
+	            { id: 'projects-section' },
+	            _react2.default.createElement('div', { className: 'projects-anchor' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'color-strip' },
 	            _react2.default.createElement(
-	              'h1',
+	              'center',
 	              null,
-	              'Projects'
-	            ),
-	            _react2.default.createElement(
-	              'button',
-	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Projects'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	                _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	              )
 	            )
-	          )
-	        ),
-	        _react2.default.createElement(_ProjectTile2.default, {
-	          hover: 'Solo contributor',
-	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
-	          githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
-	          id: '1',
-	          siteLink: 'https://seeyouwhen.herokuapp.com',
-	          header: 'SeeYouWhen',
-	          content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
-	        }),
-	        _react2.default.createElement(_ProjectTile2.default, {
-	          hover: 'Multiple contributors',
-	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
-	          githubLink: 'https://github.com/emlanctot/appful',
-	          id: '2',
-	          siteLink: 'https://appful.herokuapp.com',
-	          header: 'Appful',
-	          content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
-	        }),
-	        _react2.default.createElement(_ProjectTile2.default, {
-	          hover: 'Solo contributor',
-	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
-	          githubLink: 'https://github.com/KayliBrownstein/giphy-search',
-	          id: '3',
-	          siteLink: 'http://gif-search-app.herokuapp.com',
-	          header: 'GIF Search',
-	          content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
-	        }),
-	        _react2.default.createElement(_ProjectTile2.default, {
-	          hover: 'Multiple contributors',
-	          collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	          imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
-	          githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
-	          id: '4',
-	          siteLink: 'http://farmalarm.herokuapp.com',
-	          header: 'Farm Alarm',
-	          content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
-	        })
+	          ),
+	          _react2.default.createElement(_ProjectTile2.default, {
+	            hover: 'Solo contributor',
+	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
+	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
+	            githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
+	            id: '1',
+	            siteLink: 'https://seeyouwhen.herokuapp.com',
+	            header: 'SeeYouWhen',
+	            content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
+	          }),
+	          _react2.default.createElement(_ProjectTile2.default, {
+	            hover: 'Multiple contributors',
+	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
+	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
+	            githubLink: 'https://github.com/emlanctot/appful',
+	            id: '2',
+	            siteLink: 'https://appful.herokuapp.com',
+	            header: 'Appful',
+	            content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
+	          }),
+	          _react2.default.createElement(_ProjectTile2.default, {
+	            hover: 'Solo contributor',
+	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
+	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
+	            githubLink: 'https://github.com/KayliBrownstein/giphy-search',
+	            id: '3',
+	            siteLink: 'http://gif-search-app.herokuapp.com',
+	            header: 'GIF Search',
+	            content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
+	          }),
+	          _react2.default.createElement(_ProjectTile2.default, {
+	            hover: 'Multiple contributors',
+	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
+	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
+	            githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
+	            id: '4',
+	            siteLink: 'http://farmalarm.herokuapp.com',
+	            header: 'Farm Alarm',
+	            content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
+	          })
+	        )
 	      );
 	    }
 	  }]);
@@ -21206,46 +21214,50 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'resume-container small-12 medium-12 large-12 columns' },
-	        _react2.default.createElement(
-	          _reactScrollableAnchor2.default,
-	          { id: 'resume-section' },
-	          _react2.default.createElement('div', { className: 'resume-anchor' })
-	        ),
+	        { className: 'row collapse' },
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'color-strip' },
+	          { className: 'resume-container small-12 medium-12 large-12 columns' },
+	          _react2.default.createElement(
+	            _reactScrollableAnchor2.default,
+	            { id: 'resume-section' },
+	            _react2.default.createElement('div', { className: 'resume-anchor' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'color-strip' },
+	            _react2.default.createElement(
+	              'center',
+	              null,
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Resume'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	                _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	              )
+	            )
+	          ),
 	          _react2.default.createElement(
 	            'center',
 	            null,
 	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Resume'
-	            ),
-	            _react2.default.createElement(
-	              'button',
-	              { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	              _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	              'a',
+	              { href: 'KayliBrownsteinResumePersonalSite.pdf', download: 'KayliBrownsteinResumePersonalSite.pdf' },
+	              _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true', id: 'download-icon' }),
+	              'Download'
 	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'center',
-	          null,
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'KayliBrownsteinResumePersonalSite.pdf', download: 'KayliBrownsteinResumePersonalSite.pdf' },
-	            _react2.default.createElement('i', { className: 'fa fa-download', 'aria-hidden': 'true', id: 'download-icon' }),
-	            'Download'
-	          )
-	        ),
-	        _react2.default.createElement('hr', null),
-	        _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
-	        _react2.default.createElement('hr', null),
-	        _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
-	        _react2.default.createElement('hr', null),
-	        _react2.default.createElement(_EducationContainer2.default, null)
+	          ),
+	          _react2.default.createElement('hr', null),
+	          _react2.default.createElement(_TechnicalSkillsContainer2.default, null),
+	          _react2.default.createElement('hr', null),
+	          _react2.default.createElement(_ProfessionalExperienceContainer2.default, null),
+	          _react2.default.createElement('hr', null),
+	          _react2.default.createElement(_EducationContainer2.default, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -21776,42 +21788,46 @@
 	var ConnectTile = function ConnectTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'connect-container column' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'connect-section' },
-	      _react2.default.createElement('div', { className: 'connect-anchor' })
-	    ),
+	    { className: 'row collapse' },
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'color-strip' },
+	      { className: 'connect-container column' },
 	      _react2.default.createElement(
-	        'center',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Connect'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'connect-icons' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://github.com/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        _reactScrollableAnchor2.default,
+	        { id: 'connect-section' },
+	        _react2.default.createElement('div', { className: 'connect-anchor' })
 	      ),
 	      _react2.default.createElement(
-	        'a',
-	        { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
-	        _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        'div',
+	        { id: 'color-strip' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Connect'
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'connect-icons' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'https://github.com/kaylibrownstein', target: '_blank' },
+	          _react2.default.createElement('img', { src: 'http://www.demetrisgourtzilidis.com/wp-content/uploads/2015/12/github-logo.png', id: 'github-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'https://linkedin.com/in/kaylibrownstein', target: '_blank' },
+	          _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', id: 'linkedin-connect-image', className: 'small-12 medium-5 large-5 columns' })
+	        )
 	      )
 	    )
 	  );
@@ -21846,44 +21862,48 @@
 	var ContactTile = function ContactTile(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'contact-container column' },
-	    _react2.default.createElement(
-	      _reactScrollableAnchor2.default,
-	      { id: 'contact-section' },
-	      _react2.default.createElement('div', { className: 'contact-anchor' })
-	    ),
+	    { className: 'row collapse' },
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'color-strip' },
+	      { className: 'contact-container column' },
 	      _react2.default.createElement(
-	        'center',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Contact'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
-	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'contact-info' },
-	      _react2.default.createElement(
-	        'span',
-	        { id: 'email-info' },
-	        _react2.default.createElement('i', { className: 'fa fa-envelope-o', 'aria-hidden': 'true', id: 'email-icon' }),
-	        'kaylivbrownstein@gmail.com'
+	        _reactScrollableAnchor2.default,
+	        { id: 'contact-section' },
+	        _react2.default.createElement('div', { className: 'contact-anchor' })
 	      ),
 	      _react2.default.createElement(
-	        'span',
-	        { id: 'location-info' },
-	        _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true', id: 'map-icon' }),
-	        'Boston, MA'
+	        'div',
+	        { id: 'color-strip' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Contact'
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { id: 'fa-up-arrow', onClick: _reactScrollableAnchor.goToTop },
+	            _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-up', 'aria-hidden': 'true' })
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'contact-info' },
+	        _react2.default.createElement(
+	          'span',
+	          { id: 'email-info' },
+	          _react2.default.createElement('i', { className: 'fa fa-envelope-o', 'aria-hidden': 'true', id: 'email-icon' }),
+	          'kaylivbrownstein@gmail.com'
+	        ),
+	        _react2.default.createElement(
+	          'span',
+	          { id: 'location-info' },
+	          _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true', id: 'map-icon' }),
+	          'Boston, MA'
+	        )
 	      )
 	    )
 	  );

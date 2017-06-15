@@ -11,6 +11,11 @@
   margin-right: 0;
 }
 
+.row .home-container {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 /*NAV CONTAINER*/
 
 .navbar {
@@ -48,7 +53,9 @@
 
 .connect-container {
   background-color: #93CCC6;
-  padding-top: 2%;
+  right: 0;
+  left: 0;
+  /*padding-top: 2%;*/
 }
 
 #github-connect-image {
@@ -83,7 +90,7 @@ h1 {
 /*CONTACT CONTAINER*/
 
 .contact-container {
-  padding-top: 2%;
+  /*padding-top: 2%;*/
   padding-bottom: 5%;
 }
 
@@ -120,7 +127,8 @@ h1 {
 
 .project-container {
   background-color: #FFEAAD;
-  padding-top: 2%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #project-image {
@@ -250,7 +258,7 @@ h1 {
 
 .resume-container {
   background-color: white;
-  padding-top: 2%;
+  /*padding-top: 2%;*/
 }
 
 #download-icon {

@@ -15,24 +15,26 @@ class ResumeContainer extends Component {
 
   render(){
     return(
-      <div className="resume-container small-12 medium-12 large-12 columns">
-        <ScrollableAnchor id={'resume-section'}>
-          <div className="resume-anchor">
+      <div className="row collapse">
+        <div className="resume-container small-12 medium-12 large-12 columns">
+          <ScrollableAnchor id={'resume-section'}>
+            <div className="resume-anchor">
+            </div>
+          </ScrollableAnchor>
+          <div id="color-strip">
+          <center><h1>Resume</h1>
+          <button id="fa-up-arrow" onClick={goToTop}>
+            <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+          </button></center>
           </div>
-        </ScrollableAnchor>
-        <div id="color-strip">
-        <center><h1>Resume</h1>
-        <button id="fa-up-arrow" onClick={goToTop}>
-          <i className="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
-        </button></center>
+          <center><a href="KayliBrownsteinResumePersonalSite.pdf" download="KayliBrownsteinResumePersonalSite.pdf"><i className="fa fa-download" aria-hidden="true" id="download-icon"></i>Download</a></center>
+          <hr />
+          <TechnicalSkillsContainer />
+          <hr />
+          <ProfessionalExperienceContainer />
+          <hr />
+          <EducationContainer />
         </div>
-        <center><a href="KayliBrownsteinResumePersonalSite.pdf" download="KayliBrownsteinResumePersonalSite.pdf"><i className="fa fa-download" aria-hidden="true" id="download-icon"></i>Download</a></center>
-        <hr />
-        <TechnicalSkillsContainer />
-        <hr />
-        <ProfessionalExperienceContainer />
-        <hr />
-        <EducationContainer />
       </div>
     )
   }
