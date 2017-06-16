@@ -23,7 +23,7 @@ class ProjectsContainer extends Component {
     let projects = this.state.projects.map((project) => {
       return(
         <ProjectTile
-          id={project.id}
+          key={project.id}
           hover={project.hover}
           collabIcon={project.collabIcon}
           imageLink={project.imageLink}

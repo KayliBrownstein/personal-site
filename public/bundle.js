@@ -21001,7 +21001,7 @@
 	    value: function render() {
 	      var projects = this.state.projects.map(function (project) {
 	        return _react2.default.createElement(_ProjectTile2.default, {
-	          id: project.id,
+	          key: project.id,
 	          hover: project.hover,
 	          collabIcon: project.collabIcon,
 	          imageLink: project.imageLink,
