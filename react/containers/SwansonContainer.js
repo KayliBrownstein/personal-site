@@ -14,18 +14,18 @@ class SwansonContainer extends Component {
   }
 
 componentDidMount(){
-  fetch("/api/v1/quotes")
+  fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
     .then((response) => response.json())
     .then((responseData) => {
-      this.setState({quote: responseData.quote})
+      this.setState({quote: responseData})
     })
 }
 
 handleClick(){
-    fetch("/api/v1/quotes")
+    fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
     .then((response) => response.json())
     .then((responseData) => {
-      this.setState({quote: responseData.quote})
+      this.setState({quote: responseData})
     })
 }
 

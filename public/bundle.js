@@ -21984,10 +21984,10 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      fetch("/api/v1/quotes").then(function (response) {
+	      fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes").then(function (response) {
 	        return response.json();
 	      }).then(function (responseData) {
-	        _this2.setState({ quote: responseData.quote });
+	        _this2.setState({ quote: responseData });
 	      });
 	    }
 	  }, {
@@ -21995,10 +21995,10 @@
 	    value: function handleClick() {
 	      var _this3 = this;
 
-	      fetch("/api/v1/quotes").then(function (response) {
+	      fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes").then(function (response) {
 	        return response.json();
 	      }).then(function (responseData) {
-	        _this3.setState({ quote: responseData.quote });
+	        _this3.setState({ quote: responseData });
 	      });
 	    }
 	  }, {
