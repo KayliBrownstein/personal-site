@@ -21315,21 +21315,55 @@
 	      databases: [],
 	      software: []
 	    };
+	    _this.getLanguages = _this.getLanguages.bind(_this);
+	    _this.getDatabases = _this.getDatabases.bind(_this);
+	    _this.getSoftware = _this.getSoftware.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(TechnicalSkillsContainer, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      this.getLanguages();
+	      this.getDatabases();
+	      this.getSoftware();
+	    }
+	  }, {
+	    key: 'getLanguages',
+	    value: function getLanguages() {
 	      var _this2 = this;
 
-	      fetch("/api/v1/techskills").then(function (response) {
+	      fetch("/api/v1/languages").then(function (response) {
 	        return response.json();
 	      }).then(function (responseData) {
 	        _this2.setState({
-	          languages: responseData.languages,
-	          databases: responseData.databases,
-	          software: responseData.software
+	          languages: responseData
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'getDatabases',
+	    value: function getDatabases() {
+	      var _this3 = this;
+
+	      fetch("/api/v1/databases").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this3.setState({
+	          databases: responseData
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'getSoftware',
+	    value: function getSoftware() {
+	      var _this4 = this;
+
+	      fetch("/api/v1/software").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this4.setState({
+	          software: responseData
 	        });
 	      });
 	    }

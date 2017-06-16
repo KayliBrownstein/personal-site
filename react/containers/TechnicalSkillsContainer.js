@@ -11,18 +11,45 @@ class TechnicalSkillsContainer extends Component {
       databases: [],
       software: []
     }
+    this.getLanguages = this.getLanguages.bind(this);
+    this.getDatabases = this.getDatabases.bind(this);
+    this.getSoftware = this.getSoftware.bind(this);
   }
 
   componentDidMount(){
-  fetch("/api/v1/techskills")
-    .then((response) => response.json())
-    .then((responseData) => {
-      this.setState({
-        languages: responseData.languages,
-        databases: responseData.databases,
-        software: responseData.software
-      });
-    })
+    this.getLanguages();
+    this.getDatabases();
+    this.getSoftware();
+  }
+
+  getLanguages(){
+    fetch("/api/v1/languages")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          languages: responseData
+        });
+      })
+  }
+    
+  getDatabases(){
+    fetch("/api/v1/databases")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          databases: responseData
+        });
+      })
+  }
+  
+  getSoftware(){
+    fetch("/api/v1/software")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          software: responseData
+        });
+      })
   }
 
   render(){

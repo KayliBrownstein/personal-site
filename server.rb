@@ -25,9 +25,17 @@ def load_projects
 	JSON.parse(File.read("projects.json"))
 end 
 
-def load_techskills
-	JSON.parse(File.read("techskills.json"))
+def load_languages
+	JSON.parse(File.read("languages.json"))
+end
+
+def load_databases
+	JSON.parse(File.read("databases.json"))
 end 
+
+def load_software
+	JSON.parse(File.read("software.json"))
+end  
 
 get '/api/v1/quotes' do
 	@quote = load_quote
@@ -53,8 +61,20 @@ get '/api/v1/projects' do
 	json @projects
 end   
 
-get '/api/v1/techskills' do
-	@techskills = load_techskills
+get '/api/v1/languages' do
+	@languages = load_languages
 	content_type :json
-	json @techskills
+	json @languages
+end  
+
+get '/api/v1/databases' do
+	@databases = load_databases
+	content_type :json
+	json @databases
+end  
+
+get '/api/v1/software' do
+	@software = load_software
+	content_type :json
+	json @software
 end  

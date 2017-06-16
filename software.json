@@ -1,40 +1,3 @@
-{
-  "languages":
-
-  [
-    {
-      "name": "HTML",
-      "icon": "html-logo.png"
-    },
-    {
-      "name": "CSS",
-      "icon": "css-logo.png"
-    },
-    {
-      "name": "Javascript",
-      "icon": "javascript-logo.png"
-    },
-    {
-      "name": "Ruby",
-      "icon": "ruby-logo.png"
-    }
-  ]
-},
-{
-  "databases": 
- [
-    {
-      "name": "SQL",
-      "icon": "sql-logo.png"
-    },
-    {
-      "name": "PostgreSQL",
-      "icon": "postgresql-logo.png"
-    }
-  ]
-},
-{
-  "software":
   [
     {
       "name": "Rails",
@@ -89,4 +52,3 @@
       "icon": "jira-icon.png"
     }
   ]
-}
