@@ -332,12 +332,12 @@ h1 {
   margin-top: 4%;
   margin-bottom: 4%;
   padding: 15px;
-  height: 150px;
+  height: 140px;
 }
 
 .education-container, .profex-container {
-  padding-bottom: 5%;
-}
+/*  padding-bottom: 5%;
+*/}
 
 #up-button {
   display: inline;
