@@ -20,10 +20,20 @@
   height: 120px;
 }
 
+.swanson-container {
+  background-color: #93CCC6;
+}
+
+#next-button {
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+}
+
 /*NAV CONTAINER*/
 
 .navbar {
-  background-color: #6CBDB5;
+  background-color: #0AABBA;
   position: fixed;
   height: 40px;
   width: 100%;
@@ -130,7 +140,7 @@ h1 {
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: #FFEAAD;
+  background-color: #93CCC6;
   margin-left: 0;
   margin-right: 0;
 }
@@ -143,7 +153,7 @@ h1 {
 }
 
 .project-tile {
-  background-color: #FFEAAD;
+  background-color: #93CCC6;
   /*margin-top: 1%;*/
   padding-bottom: 5%;
   width: 0%;
@@ -179,6 +189,7 @@ h1 {
   height: 10%;
   padding: 5px;
   margin-bottom: 2%;
+  border: solid black 1px;
 }
 
 #font-awesome-icon {

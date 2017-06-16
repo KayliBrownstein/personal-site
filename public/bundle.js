@@ -22086,7 +22086,7 @@
 	      null,
 	      _react2.default.createElement(
 	        "div",
-	        { className: "button", onClick: props.handleClick },
+	        { className: "button", id: "next-button", onClick: props.handleClick },
 	        "Next Ron Swanson quote"
 	      )
 	    )
