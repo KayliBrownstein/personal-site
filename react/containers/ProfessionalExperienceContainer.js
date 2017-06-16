@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ProfExTile from '../components/ProfExTile';
-import { goToTop } from 'react-scrollable-anchor';
 
 class ProfessionalExperienceContainer extends Component {
   constructor(props){
@@ -19,16 +18,16 @@ class ProfessionalExperienceContainer extends Component {
   }
 
   render(){
-  let profex = this.state.profex.map((profex) => {
-    return(
-      <ProfExTile
-        name={profex.name}
-        location={profex.location}
-        dates={profex.dates}
-        title={profex.title}
-      />
-    )
-  })
+    let profex = this.state.profex.map((profex) => {
+      return(
+        <ProfExTile
+          name={profex.name}
+          location={profex.location}
+          dates={profex.dates}
+          title={profex.title}
+        />
+      )
+    })
 
     return(
       <div className="profex-container small-12 medium-8 large-8 medium-centered large-centered columns">

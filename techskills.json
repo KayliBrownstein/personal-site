@@ -1,0 +1,92 @@
+{
+  "languages":
+
+  [
+    {
+      "name": "HTML",
+      "icon": "html-logo.png"
+    },
+    {
+      "name": "CSS",
+      "icon": "css-logo.png"
+    },
+    {
+      "name": "Javascript",
+      "icon": "javascript-logo.png"
+    },
+    {
+      "name": "Ruby",
+      "icon": "ruby-logo.png"
+    }
+  ]
+},
+{
+  "databases": 
+ [
+    {
+      "name": "SQL",
+      "icon": "sql-logo.png"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "postgresql-logo.png"
+    }
+  ]
+},
+{
+  "software":
+  [
+    {
+      "name": "Rails",
+      "icon": "ror-logo.png"
+    },
+    {
+      "name": "ReactJS",
+      "icon": "react-logo.png"
+    },
+    {
+      "name": "Sinatra",
+      "icon": "sinatra-logo.png"
+    },
+    {
+      "name": "jQuery",
+      "icon": "jquery-logo.png"
+    },
+    {
+      "name": "RSpec",
+      "icon": "rspec-logo.png"
+    },
+    {
+      "name": "Capybara",
+      "icon": "capybara-logo.png"
+    },
+    {
+      "name": "Sass",
+      "icon": "sass-logo.png"
+    },
+    {
+      "name": "Foundation",
+      "icon": "foundation-logo.png"
+    },
+    {
+      "name": "Heroku",
+      "icon": "heroku-logo.png"
+    },
+    {
+      "name": "Git",
+      "icon": "git-logo.png"
+    },
+    {
+      "name": "Github",
+      "icon": "github-icon.png"
+    },
+    {
+      "name": "APIs",
+      "icon": "api-logo.png"
+    },
+    {
+      "name": "JIRA",
+      "icon": "jira-icon.png"
+    }
+  ]
+}

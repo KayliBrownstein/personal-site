@@ -20979,13 +20979,39 @@
 
 	    var _this = _possibleConstructorReturn(this, (ProjectsContainer.__proto__ || Object.getPrototypeOf(ProjectsContainer)).call(this, props));
 
-	    _this.state = {};
+	    _this.state = {
+	      projects: []
+	    };
 	    return _this;
 	  }
 
 	  _createClass(ProjectsContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/projects").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({ projects: responseData });
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var projects = this.state.projects.map(function (project) {
+	        return _react2.default.createElement(_ProjectTile2.default, {
+	          id: project.id,
+	          hover: project.hover,
+	          collabIcon: project.collabIcon,
+	          imageLink: project.imageLink,
+	          githubLink: project.githubLink,
+	          siteLink: project.siteLink,
+	          header: project.header,
+	          content: project.content
+	        });
+	      });
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row collapse' },
@@ -21015,46 +21041,7 @@
 	              )
 	            )
 	          ),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Solo contributor',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
-	            id: '1',
-	            siteLink: 'https://seeyouwhen.herokuapp.com',
-	            header: 'SeeYouWhen',
-	            content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Multiple contributors',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
-	            githubLink: 'https://github.com/emlanctot/appful',
-	            id: '2',
-	            siteLink: 'https://appful.herokuapp.com',
-	            header: 'Appful',
-	            content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Solo contributor',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/giphy-search',
-	            id: '3',
-	            siteLink: 'http://gif-search-app.herokuapp.com',
-	            header: 'GIF Search',
-	            content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Multiple contributors',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
-	            id: '4',
-	            siteLink: 'http://farmalarm.herokuapp.com',
-	            header: 'Farm Alarm',
-	            content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
-	          })
+	          projects
 	        )
 	      );
 	    }
@@ -21102,20 +21089,6 @@
 	            'h2',
 	            null,
 	            props.header
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'font-awesome-icon' },
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'hoverinfo' },
-	              props.collabIcon,
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                props.hover
-	              )
-	            )
 	          )
 	        )
 	      )
@@ -21162,6 +21135,20 @@
 	        'a',
 	        { href: props.siteLink, target: '_blank' },
 	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'font-awesome-icon' },
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'hoverinfo' },
+	          props.collabIcon,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            props.hover
+	          )
+	        )
 	      )
 	    )
 	  );
@@ -21289,6 +21276,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -21307,133 +21296,113 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var TechnicalSkillsContainer = function TechnicalSkillsContainer(props) {
-	  var LANGUAGES = [{
-	    "name": "HTML",
-	    "icon": 'html-logo.png'
-	  }, {
-	    "name": "CSS",
-	    "icon": 'css-logo.png'
-	  }, {
-	    "name": "Javascript",
-	    "icon": 'javascript-logo.png'
-	  }, {
-	    "name": "Ruby",
-	    "icon": 'ruby-logo.png'
-	  }];
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  var DATABASES = [{
-	    "name": "SQL",
-	    "icon": 'sql-logo.png'
-	  }, {
-	    "name": "PostgreSQL",
-	    "icon": 'postgresql-logo.png'
-	  }];
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	  var SOFTWARE = [{
-	    "name": "Rails",
-	    "icon": 'ror-logo.png'
-	  }, {
-	    "name": "ReactJS",
-	    "icon": 'react-logo.png'
-	  }, {
-	    "name": "Sinatra",
-	    "icon": 'sinatra-logo.png'
-	  }, {
-	    "name": "jQuery",
-	    "icon": 'jquery-logo.png'
-	  }, {
-	    "name": "RSpec",
-	    "icon": 'rspec-logo.png'
-	  }, {
-	    "name": "Capybara",
-	    "icon": 'capybara-logo.png'
-	  }, {
-	    "name": "Sass",
-	    "icon": 'sass-logo.png'
-	  }, {
-	    "name": "Foundation",
-	    "icon": 'foundation-logo.png'
-	  }, {
-	    "name": "Heroku",
-	    "icon": 'heroku-logo.png'
-	  }, {
-	    "name": "Git",
-	    "icon": 'git-logo.png'
-	  }, {
-	    "name": "Github",
-	    "icon": 'github-icon.png'
-	  }, {
-	    "name": "APIs",
-	    "icon": 'api-logo.png'
-	  }, {
-	    "name": "JIRA",
-	    "icon": 'jira-icon.png'
-	  }];
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	  var language_skills = LANGUAGES.map(function (language) {
-	    return _react2.default.createElement(_LanguageTile2.default, {
-	      language: language.name,
-	      icon: language.icon
-	    });
-	  });
-	  var database_skills = DATABASES.map(function (database) {
-	    return _react2.default.createElement(_DatabaseTile2.default, {
-	      database: database.name,
-	      icon: database.icon
-	    });
-	  });
-	  var software_skills = SOFTWARE.map(function (software) {
-	    return _react2.default.createElement(_SoftwareTile2.default, {
-	      software: software.name,
-	      icon: software.icon
-	    });
-	  });
+	var TechnicalSkillsContainer = function (_Component) {
+	  _inherits(TechnicalSkillsContainer, _Component);
 
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h3',
-	        { id: 'resume-header' },
-	        'Technical Skills'
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'languages-container small-12 medium-4 large-4 columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Languages'
-	      ),
-	      language_skills
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'databases-container small-12 medium-4 large-4 columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Databases'
-	      ),
-	      database_skills
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Software/Tools/Frameworks'
-	      ),
-	      software_skills
-	    )
-	  );
-	};
+	  function TechnicalSkillsContainer(props) {
+	    _classCallCheck(this, TechnicalSkillsContainer);
+
+	    var _this = _possibleConstructorReturn(this, (TechnicalSkillsContainer.__proto__ || Object.getPrototypeOf(TechnicalSkillsContainer)).call(this, props));
+
+	    _this.state = {
+	      languages: [],
+	      databases: [],
+	      software: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(TechnicalSkillsContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/techskills").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({
+	          languages: responseData.languages,
+	          databases: responseData.databases,
+	          software: responseData.software
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var language_skills = this.state.languages.map(function (language) {
+	        return _react2.default.createElement(_LanguageTile2.default, {
+	          language: language.name,
+	          icon: language.icon
+	        });
+	      });
+	      var database_skills = this.state.databases.map(function (database) {
+	        return _react2.default.createElement(_DatabaseTile2.default, {
+	          database: database.name,
+	          icon: database.icon
+	        });
+	      });
+	      var software_skills = this.state.software.map(function (software) {
+	        return _react2.default.createElement(_SoftwareTile2.default, {
+	          software: software.name,
+	          icon: software.icon
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h3',
+	            { id: 'resume-header' },
+	            'Technical Skills'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'languages-container small-12 medium-4 large-4 columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Languages'
+	          ),
+	          language_skills
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'databases-container small-12 medium-4 large-4 columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Databases'
+	          ),
+	          database_skills
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Software/Tools/Frameworks'
+	          ),
+	          software_skills
+	        )
+	      );
+	    }
+	  }]);
+
+	  return TechnicalSkillsContainer;
+	}(_react.Component);
 
 	exports.default = TechnicalSkillsContainer;
 
@@ -21534,8 +21503,6 @@
 	var _ProfExTile = __webpack_require__(187);
 
 	var _ProfExTile2 = _interopRequireDefault(_ProfExTile);
-
-	var _reactScrollableAnchor = __webpack_require__(170);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
