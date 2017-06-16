@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Boston College",
+      "location": "Chestnut Hill, MA",
+      "dates": "September '11 - May '15",
+      "study": "B.A. English, French"
+    },
+    {
+      "name": "La Sorbonne",
+      "location": "Paris, France",
+      "dates": "August '13 - December '13",
+      "study": "French Literature"
+    }
+  ]

@@ -13,8 +13,18 @@ def load_quote
 	JSON.parse(File.read("quotes.json")).sample
 end 
 
+def load_education
+	JSON.parse(File.read("education.json"))
+end 
+
 get '/api/v1/quotes' do
 	@quote = load_quote
 	content_type :json
 	json @quote
-end 
+end
+
+get '/api/v1/education' do
+	@education = load_education
+	content_type :json
+	json @education
+end  
