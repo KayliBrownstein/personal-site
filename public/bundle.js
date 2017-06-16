@@ -22009,11 +22009,11 @@
 	        { className: 'row collapse' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'resume-container small-12 medium-12 large-12 columns' },
+	          { className: 'swanson-container small-12 medium-12 large-12 columns' },
 	          _react2.default.createElement(
 	            _reactScrollableAnchor2.default,
-	            { id: 'resume-section' },
-	            _react2.default.createElement('div', { className: 'resume-anchor' })
+	            { id: 'swanson-section' },
+	            _react2.default.createElement('div', { className: 'swanson-anchor' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
