@@ -2,41 +2,24 @@ import React, { Component } from 'react';
 import ProfExTile from '../components/ProfExTile';
 import { goToTop } from 'react-scrollable-anchor';
 
-const ProfessionalExperienceContainer = props =>  {
-  const PROFEX = [
-    {
-      "name": "Launch Academy",
-      "location": "Boston, MA",
-      "dates": "March '17 - May '17",
-      "title": "Apprentice Full Stack Developer"
-    },
-    {
-      "name": "Brill USA",
-      "location": "Boston, MA",
-      "dates": "August '16 - February '17",
-      "title": "Project Manager"
-    },
-    {
-      "name": "Vista Higher Learning",
-      "location": "Boston, MA",
-      "dates": "July '16 - August '16",
-      "title": "Associate Project Manager"
-    },
-    {
-      "name": "Vista Higher Learning",
-      "location": "Boston, MA",
-      "dates": "January '15 - June '16",
-      "title": "Project Assistant"
-    },
-    {
-      "name": "Vista Higher Learning",
-      "location": "Boston, MA",
-      "dates": "January '14 - December '14",
-      "title": "Editorial Intern—Secondary Ed"
+class ProfessionalExperienceContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      profex: []
     }
-  ]
+  }
 
-  let profex = PROFEX.map((profex) => {
+  componentDidMount(){
+  fetch("/api/v1/profex")
+    .then((response) => response.json())
+    .then((responseData) => {
+      this.setState({profex: responseData})
+    })
+  }
+
+  render(){
+  let profex = this.state.profex.map((profex) => {
     return(
       <ProfExTile
         name={profex.name}
@@ -46,12 +29,14 @@ const ProfessionalExperienceContainer = props =>  {
       />
     )
   })
+
     return(
       <div className="profex-container small-12 medium-8 large-8 medium-centered large-centered columns">
         <center><h3 id="resume-header">Professional Experience</h3></center>
         {profex}
       </div>
     )
+  }
 }
 
 export default ProfessionalExperienceContainer;

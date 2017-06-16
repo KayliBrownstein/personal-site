@@ -17,6 +17,10 @@ def load_education
 	JSON.parse(File.read("education.json"))
 end 
 
+def load_profex
+	JSON.parse(File.read("profex.json"))
+end 
+
 get '/api/v1/quotes' do
 	@quote = load_quote
 	content_type :json
@@ -27,4 +31,10 @@ get '/api/v1/education' do
 	@education = load_education
 	content_type :json
 	json @education
+end  
+
+get '/api/v1/profex' do
+	@profex = load_profex
+	content_type :json
+	json @profex
 end  
