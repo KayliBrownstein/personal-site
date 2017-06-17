@@ -20994,6 +20994,7 @@
 	        return response.json();
 	      }).then(function (responseData) {
 	        _this2.setState({ projects: responseData });
+	        console.log(responseData[0].collabIcon);
 	      });
 	    }
 	  }, {
@@ -21146,7 +21147,9 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            props.hover
+	            '`$',
+	            props.hover,
+	            '`'
 	          )
 	        )
 	      )

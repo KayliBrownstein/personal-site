@@ -26,7 +26,7 @@ const ProjectTile = props => {
         <div id='font-awesome-icon'>
           <div id="hoverinfo">
             {props.collabIcon}
-            <p>{props.hover}</p>
+            <p>`${props.hover}`</p>
           </div>
         </div>
       </div>

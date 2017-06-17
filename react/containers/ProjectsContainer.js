@@ -16,6 +16,7 @@ class ProjectsContainer extends Component {
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({projects: responseData})
+      console.log(responseData[0].collabIcon)
     })
   }
 
