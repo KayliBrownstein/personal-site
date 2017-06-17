@@ -1,0 +1,10 @@
+ [
+    {
+      "name": "SQL",
+      "icon": "sql-logo.png"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "postgresql-logo.png"
+    }
+  ]

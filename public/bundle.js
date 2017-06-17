@@ -20979,13 +20979,40 @@
 
 	    var _this = _possibleConstructorReturn(this, (ProjectsContainer.__proto__ || Object.getPrototypeOf(ProjectsContainer)).call(this, props));
 
-	    _this.state = {};
+	    _this.state = {
+	      projects: []
+	    };
 	    return _this;
 	  }
 
 	  _createClass(ProjectsContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/projects").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({ projects: responseData });
+	        console.log(responseData[0].collabIcon);
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var projects = this.state.projects.map(function (project) {
+	        return _react2.default.createElement(_ProjectTile2.default, {
+	          key: project.id,
+	          hover: project.hover,
+	          collabIcon: project.collabIcon,
+	          imageLink: project.imageLink,
+	          githubLink: project.githubLink,
+	          siteLink: project.siteLink,
+	          header: project.header,
+	          content: project.content
+	        });
+	      });
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row collapse' },
@@ -21015,46 +21042,7 @@
 	              )
 	            )
 	          ),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Solo contributor',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/syw_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/event-planner-voting',
-	            id: '1',
-	            siteLink: 'https://seeyouwhen.herokuapp.com',
-	            header: 'SeeYouWhen',
-	            content: ' Allows groups to easily plan events by providing a platform for voting on suggestions; React frontend and Rails backend; Google Maps API for directions and location information; ActionMailer and SendGrid for emails; Carrierwave and Amazon S3 for profile photos; optimized for mobile; rolled user authentication utilizing bcrypt for password security. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Multiple contributors',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/appful_screenshot.png',
-	            githubLink: 'https://github.com/emlanctot/appful',
-	            id: '2',
-	            siteLink: 'https://appful.herokuapp.com',
-	            header: 'Appful',
-	            content: ' Built collaboratively with three peer developers; Allows amateur developers to get constructive feedback on their deployed apps by way of user reviews focused on design, concept, and usability; React frontend and Rails backend; Devise for user authentication; Carrierwave for profile photos. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Solo contributor',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-user', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/gif_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/giphy-search',
-	            id: '3',
-	            siteLink: 'http://gif-search-app.herokuapp.com',
-	            header: 'GIF Search',
-	            content: ' Prompts user for a search term, and returns 24 GIF results matching that term; React frontend and operates on a Sinatra server; GIPHY API for GIF results. '
-	          }),
-	          _react2.default.createElement(_ProjectTile2.default, {
-	            hover: 'Multiple contributors',
-	            collabIcon: _react2.default.createElement('i', { className: 'fa fa-users', 'aria-hidden': 'true' }),
-	            imageLink: 'https://s3.amazonaws.com/kb-personal-site-production/farmalarm_screenshot.png',
-	            githubLink: 'https://github.com/KayliBrownstein/farmers-market-search',
-	            id: '4',
-	            siteLink: 'http://farmalarm.herokuapp.com',
-	            header: 'Farm Alarm',
-	            content: ' Built collaboratively with one peer developer during a hackathon; Prompts user for their zip code, and returns details for the closest farmers\u2019 markets; React frontend and operates on a Sinatra server; USDA\'s Farmers\' Market API for listings and location information. '
-	          })
+	          projects
 	        )
 	      );
 	    }
@@ -21102,20 +21090,6 @@
 	            'h2',
 	            null,
 	            props.header
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'font-awesome-icon' },
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'hoverinfo' },
-	              props.collabIcon,
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                props.hover
-	              )
-	            )
 	          )
 	        )
 	      )
@@ -21162,6 +21136,22 @@
 	        'a',
 	        { href: props.siteLink, target: '_blank' },
 	        _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/kb-personal-site-production/weblink.png', id: 'heroku-project' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'font-awesome-icon' },
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'hoverinfo' },
+	          props.collabIcon,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '`$',
+	            props.hover,
+	            '`'
+	          )
+	        )
 	      )
 	    )
 	  );
@@ -21289,6 +21279,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -21307,133 +21299,147 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var TechnicalSkillsContainer = function TechnicalSkillsContainer(props) {
-	  var LANGUAGES = [{
-	    "name": "HTML",
-	    "icon": 'html-logo.png'
-	  }, {
-	    "name": "CSS",
-	    "icon": 'css-logo.png'
-	  }, {
-	    "name": "Javascript",
-	    "icon": 'javascript-logo.png'
-	  }, {
-	    "name": "Ruby",
-	    "icon": 'ruby-logo.png'
-	  }];
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  var DATABASES = [{
-	    "name": "SQL",
-	    "icon": 'sql-logo.png'
-	  }, {
-	    "name": "PostgreSQL",
-	    "icon": 'postgresql-logo.png'
-	  }];
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	  var SOFTWARE = [{
-	    "name": "Rails",
-	    "icon": 'ror-logo.png'
-	  }, {
-	    "name": "ReactJS",
-	    "icon": 'react-logo.png'
-	  }, {
-	    "name": "Sinatra",
-	    "icon": 'sinatra-logo.png'
-	  }, {
-	    "name": "jQuery",
-	    "icon": 'jquery-logo.png'
-	  }, {
-	    "name": "RSpec",
-	    "icon": 'rspec-logo.png'
-	  }, {
-	    "name": "Capybara",
-	    "icon": 'capybara-logo.png'
-	  }, {
-	    "name": "Sass",
-	    "icon": 'sass-logo.png'
-	  }, {
-	    "name": "Foundation",
-	    "icon": 'foundation-logo.png'
-	  }, {
-	    "name": "Heroku",
-	    "icon": 'heroku-logo.png'
-	  }, {
-	    "name": "Git",
-	    "icon": 'git-logo.png'
-	  }, {
-	    "name": "Github",
-	    "icon": 'github-icon.png'
-	  }, {
-	    "name": "APIs",
-	    "icon": 'api-logo.png'
-	  }, {
-	    "name": "JIRA",
-	    "icon": 'jira-icon.png'
-	  }];
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	  var language_skills = LANGUAGES.map(function (language) {
-	    return _react2.default.createElement(_LanguageTile2.default, {
-	      language: language.name,
-	      icon: language.icon
-	    });
-	  });
-	  var database_skills = DATABASES.map(function (database) {
-	    return _react2.default.createElement(_DatabaseTile2.default, {
-	      database: database.name,
-	      icon: database.icon
-	    });
-	  });
-	  var software_skills = SOFTWARE.map(function (software) {
-	    return _react2.default.createElement(_SoftwareTile2.default, {
-	      software: software.name,
-	      icon: software.icon
-	    });
-	  });
+	var TechnicalSkillsContainer = function (_Component) {
+	  _inherits(TechnicalSkillsContainer, _Component);
 
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h3',
-	        { id: 'resume-header' },
-	        'Technical Skills'
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'languages-container small-12 medium-4 large-4 columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Languages'
-	      ),
-	      language_skills
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'databases-container small-12 medium-4 large-4 columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Databases'
-	      ),
-	      database_skills
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
-	      _react2.default.createElement(
-	        'h5',
-	        { className: 'tech-skills-title' },
-	        'Software/Tools/Frameworks'
-	      ),
-	      software_skills
-	    )
-	  );
-	};
+	  function TechnicalSkillsContainer(props) {
+	    _classCallCheck(this, TechnicalSkillsContainer);
+
+	    var _this = _possibleConstructorReturn(this, (TechnicalSkillsContainer.__proto__ || Object.getPrototypeOf(TechnicalSkillsContainer)).call(this, props));
+
+	    _this.state = {
+	      languages: [],
+	      databases: [],
+	      software: []
+	    };
+	    _this.getLanguages = _this.getLanguages.bind(_this);
+	    _this.getDatabases = _this.getDatabases.bind(_this);
+	    _this.getSoftware = _this.getSoftware.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(TechnicalSkillsContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.getLanguages();
+	      this.getDatabases();
+	      this.getSoftware();
+	    }
+	  }, {
+	    key: 'getLanguages',
+	    value: function getLanguages() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/languages").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({
+	          languages: responseData
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'getDatabases',
+	    value: function getDatabases() {
+	      var _this3 = this;
+
+	      fetch("/api/v1/databases").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this3.setState({
+	          databases: responseData
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'getSoftware',
+	    value: function getSoftware() {
+	      var _this4 = this;
+
+	      fetch("/api/v1/software").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this4.setState({
+	          software: responseData
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var language_skills = this.state.languages.map(function (language) {
+	        return _react2.default.createElement(_LanguageTile2.default, {
+	          language: language.name,
+	          icon: language.icon
+	        });
+	      });
+	      var database_skills = this.state.databases.map(function (database) {
+	        return _react2.default.createElement(_DatabaseTile2.default, {
+	          database: database.name,
+	          icon: database.icon
+	        });
+	      });
+	      var software_skills = this.state.software.map(function (software) {
+	        return _react2.default.createElement(_SoftwareTile2.default, {
+	          software: software.name,
+	          icon: software.icon
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'tech-skills-container small-12 medium-12 large-12 columns' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h3',
+	            { id: 'resume-header' },
+	            'Technical Skills'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'languages-container small-12 medium-4 large-4 columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Languages'
+	          ),
+	          language_skills
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'databases-container small-12 medium-4 large-4 columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Databases'
+	          ),
+	          database_skills
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'software-container small-12 medium-8 large-8 small-centered large-centered columns' },
+	          _react2.default.createElement(
+	            'h5',
+	            { className: 'tech-skills-title' },
+	            'Software/Tools/Frameworks'
+	          ),
+	          software_skills
+	        )
+	      );
+	    }
+	  }]);
+
+	  return TechnicalSkillsContainer;
+	}(_react.Component);
 
 	exports.default = TechnicalSkillsContainer;
 
@@ -21525,6 +21531,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -21533,61 +21541,70 @@
 
 	var _ProfExTile2 = _interopRequireDefault(_ProfExTile);
 
-	var _reactScrollableAnchor = __webpack_require__(170);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var ProfessionalExperienceContainer = function ProfessionalExperienceContainer(props) {
-	  var PROFEX = [{
-	    "name": "Launch Academy",
-	    "location": "Boston, MA",
-	    "dates": "March '17 - May '17",
-	    "title": "Apprentice Full Stack Developer"
-	  }, {
-	    "name": "Brill USA",
-	    "location": "Boston, MA",
-	    "dates": "August '16 - February '17",
-	    "title": "Project Manager"
-	  }, {
-	    "name": "Vista Higher Learning",
-	    "location": "Boston, MA",
-	    "dates": "July '16 - August '16",
-	    "title": "Associate Project Manager"
-	  }, {
-	    "name": "Vista Higher Learning",
-	    "location": "Boston, MA",
-	    "dates": "January '15 - June '16",
-	    "title": "Project Assistant"
-	  }, {
-	    "name": "Vista Higher Learning",
-	    "location": "Boston, MA",
-	    "dates": "January '14 - December '14",
-	    "title": "Editorial Intern—Secondary Ed"
-	  }];
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  var profex = PROFEX.map(function (profex) {
-	    return _react2.default.createElement(_ProfExTile2.default, {
-	      name: profex.name,
-	      location: profex.location,
-	      dates: profex.dates,
-	      title: profex.title
-	    });
-	  });
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'profex-container small-12 medium-8 large-8 medium-centered large-centered columns' },
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h3',
-	        { id: 'resume-header' },
-	        'Professional Experience'
-	      )
-	    ),
-	    profex
-	  );
-	};
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProfessionalExperienceContainer = function (_Component) {
+	  _inherits(ProfessionalExperienceContainer, _Component);
+
+	  function ProfessionalExperienceContainer(props) {
+	    _classCallCheck(this, ProfessionalExperienceContainer);
+
+	    var _this = _possibleConstructorReturn(this, (ProfessionalExperienceContainer.__proto__ || Object.getPrototypeOf(ProfessionalExperienceContainer)).call(this, props));
+
+	    _this.state = {
+	      profex: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ProfessionalExperienceContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/profex").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({ profex: responseData });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var profex = this.state.profex.map(function (profex) {
+	        return _react2.default.createElement(_ProfExTile2.default, {
+	          name: profex.name,
+	          location: profex.location,
+	          dates: profex.dates,
+	          title: profex.title
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'profex-container small-12 medium-8 large-8 medium-centered large-centered columns' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h3',
+	            { id: 'resume-header' },
+	            'Professional Experience'
+	          )
+	        ),
+	        profex
+	      );
+	    }
+	  }]);
+
+	  return ProfessionalExperienceContainer;
+	}(_react.Component);
 
 	exports.default = ProfessionalExperienceContainer;
 
@@ -21662,6 +21679,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -21672,43 +21691,69 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var EducationContainer = function EducationContainer(props) {
-	  var EDUCATION = [{
-	    "name": "Boston College",
-	    "location": "Chestnut Hill, MA",
-	    "dates": "September '11 - May '15",
-	    "study": "B.A. English, French"
-	  }, {
-	    "name": "La Sorbonne",
-	    "location": "Paris, France",
-	    "dates": "August '13 - December '13",
-	    "study": "French Literature"
-	  }];
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  var education = EDUCATION.map(function (education) {
-	    return _react2.default.createElement(_EducationTile2.default, {
-	      name: education.name,
-	      location: education.location,
-	      dates: education.dates,
-	      degree: education.degree,
-	      study: education.study
-	    });
-	  });
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'education-container small-12 medium-12 large-10 medium-centered large-centered columns' },
-	    _react2.default.createElement(
-	      'center',
-	      null,
-	      _react2.default.createElement(
-	        'h3',
-	        { id: 'resume-header' },
-	        'Education'
-	      )
-	    ),
-	    education
-	  );
-	};
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EducationContainer = function (_Component) {
+	  _inherits(EducationContainer, _Component);
+
+	  function EducationContainer(props) {
+	    _classCallCheck(this, EducationContainer);
+
+	    var _this = _possibleConstructorReturn(this, (EducationContainer.__proto__ || Object.getPrototypeOf(EducationContainer)).call(this, props));
+
+	    _this.state = {
+	      education: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(EducationContainer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      fetch("/api/v1/education").then(function (response) {
+	        return response.json();
+	      }).then(function (responseData) {
+	        _this2.setState({ education: responseData });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var education = this.state.education.map(function (education) {
+	        return _react2.default.createElement(_EducationTile2.default, {
+	          name: education.name,
+	          location: education.location,
+	          dates: education.dates,
+	          degree: education.degree,
+	          study: education.study
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'education-container small-12 medium-12 large-10 medium-centered large-centered columns' },
+	        _react2.default.createElement(
+	          'center',
+	          null,
+	          _react2.default.createElement(
+	            'h3',
+	            { id: 'resume-header' },
+	            'Education'
+	          )
+	        ),
+	        education
+	      );
+	    }
+	  }]);
+
+	  return EducationContainer;
+	}(_react.Component);
 
 	exports.default = EducationContainer;
 
@@ -21976,10 +22021,10 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      fetch("/api/v1/quotes").then(function (response) {
+	      fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes").then(function (response) {
 	        return response.json();
 	      }).then(function (responseData) {
-	        _this2.setState({ quote: responseData.quote });
+	        _this2.setState({ quote: responseData });
 	      });
 	    }
 	  }, {
@@ -21987,10 +22032,10 @@
 	    value: function handleClick() {
 	      var _this3 = this;
 
-	      fetch("/api/v1/quotes").then(function (response) {
+	      fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes").then(function (response) {
 	        return response.json();
 	      }).then(function (responseData) {
-	        _this3.setState({ quote: responseData.quote });
+	        _this3.setState({ quote: responseData });
 	      });
 	    }
 	  }, {
@@ -22001,11 +22046,11 @@
 	        { className: 'row collapse' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'resume-container small-12 medium-12 large-12 columns' },
+	          { className: 'swanson-container small-12 medium-12 large-12 columns' },
 	          _react2.default.createElement(
 	            _reactScrollableAnchor2.default,
-	            { id: 'resume-section' },
-	            _react2.default.createElement('div', { className: 'resume-anchor' })
+	            { id: 'swanson-section' },
+	            _react2.default.createElement('div', { className: 'swanson-anchor' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -22060,16 +22105,25 @@
 	    "div",
 	    { className: "swanson-tile small-12 medium-12 large-12 columns" },
 	    _react2.default.createElement(
-	      "p",
+	      "center",
 	      null,
-	      props.quote
+	      _react2.default.createElement("img", { src: "https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F93286f67-e48d-438f-8609-ac2d4e8feb29.jpg", id: "swanson-image" })
+	    ),
+	    _react2.default.createElement(
+	      "center",
+	      null,
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        props.quote
+	      )
 	    ),
 	    _react2.default.createElement(
 	      "center",
 	      null,
 	      _react2.default.createElement(
 	        "div",
-	        { className: "button", onClick: props.handleClick },
+	        { className: "button", id: "next-button", onClick: props.handleClick },
 	        "Next Ron Swanson quote"
 	      )
 	    )

@@ -14,27 +14,27 @@ class SwansonContainer extends Component {
   }
 
 componentDidMount(){
-  fetch("/api/v1/quotes")
+  fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
     .then((response) => response.json())
     .then((responseData) => {
-      this.setState({quote: responseData.quote})
+      this.setState({quote: responseData})
     })
 }
 
 handleClick(){
-    fetch("/api/v1/quotes")
+    fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
     .then((response) => response.json())
     .then((responseData) => {
-      this.setState({quote: responseData.quote})
+      this.setState({quote: responseData})
     })
 }
 
   render(){
     return(
       <div className="row collapse">
-        <div className="resume-container small-12 medium-12 large-12 columns">
-          <ScrollableAnchor id={'resume-section'}>
-            <div className="resume-anchor">
+        <div className="swanson-container small-12 medium-12 large-12 columns">
+          <ScrollableAnchor id={'swanson-section'}>
+            <div className="swanson-anchor">
             </div>
           </ScrollableAnchor>
           <div id="color-strip">

@@ -3,93 +3,57 @@ import LanguageTile from '../components/LanguageTile';
 import DatabaseTile from '../components/DatabaseTile';
 import SoftwareTile from '../components/SoftwareTile';
 
-const TechnicalSkillsContainer = props => {
-  const LANGUAGES = [
-    {
-      "name": "HTML",
-      "icon": 'html-logo.png'
-    },
-    {
-      "name": "CSS",
-      "icon": 'css-logo.png'
-    },
-    {
-      "name": "Javascript",
-      "icon": 'javascript-logo.png'
-    },
-    {
-      "name": "Ruby",
-      "icon": 'ruby-logo.png'
+class TechnicalSkillsContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      languages: [],
+      databases: [],
+      software: []
     }
-  ]
+    this.getLanguages = this.getLanguages.bind(this);
+    this.getDatabases = this.getDatabases.bind(this);
+    this.getSoftware = this.getSoftware.bind(this);
+  }
 
-  const DATABASES = [
-    {
-      "name": "SQL",
-      "icon": 'sql-logo.png'
-    },
-    {
-      "name": "PostgreSQL",
-      "icon": 'postgresql-logo.png'
-    }
-  ]
+  componentDidMount(){
+    this.getLanguages();
+    this.getDatabases();
+    this.getSoftware();
+  }
 
-  const SOFTWARE = [
-    {
-      "name": "Rails",
-      "icon": 'ror-logo.png'
-    },
-    {
-      "name": "ReactJS",
-      "icon": 'react-logo.png'
-    },
-    {
-      "name": "Sinatra",
-      "icon": 'sinatra-logo.png'
-    },
-    {
-      "name": "jQuery",
-      "icon": 'jquery-logo.png'
-    },
-    {
-      "name": "RSpec",
-      "icon": 'rspec-logo.png'
-    },
-    {
-      "name": "Capybara",
-      "icon": 'capybara-logo.png'
-    },
-    {
-      "name": "Sass",
-      "icon": 'sass-logo.png'
-    },
-    {
-      "name": "Foundation",
-      "icon": 'foundation-logo.png'
-    },
-    {
-      "name": "Heroku",
-      "icon": 'heroku-logo.png'
-    },
-    {
-      "name": "Git",
-      "icon": 'git-logo.png'
-    },
-    {
-      "name": "Github",
-      "icon": 'github-icon.png'
-    },
-    {
-      "name": "APIs",
-      "icon": 'api-logo.png'
-    },
-    {
-      "name": "JIRA",
-      "icon": 'jira-icon.png'
-    }
-  ]
+  getLanguages(){
+    fetch("/api/v1/languages")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          languages: responseData
+        });
+      })
+  }
+    
+  getDatabases(){
+    fetch("/api/v1/databases")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          databases: responseData
+        });
+      })
+  }
+  
+  getSoftware(){
+    fetch("/api/v1/software")
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          software: responseData
+        });
+      })
+  }
 
-      let language_skills = LANGUAGES.map((language) => {
+  render(){
+      let language_skills = this.state.languages.map((language) => {
         return(
           <LanguageTile
             language={language.name}
@@ -97,7 +61,7 @@ const TechnicalSkillsContainer = props => {
           />
         )
       })
-      let database_skills = DATABASES.map((database) => {
+      let database_skills = this.state.databases.map((database) => {
         return(
           <DatabaseTile
             database={database.name}
@@ -105,7 +69,7 @@ const TechnicalSkillsContainer = props => {
           />
         )
       })
-      let software_skills = SOFTWARE.map((software) => {
+      let software_skills = this.state.software.map((software) => {
         return(
           <SoftwareTile
             software={software.name}
@@ -131,7 +95,7 @@ const TechnicalSkillsContainer = props => {
         </div>
       </div>
     )
-
+  }
 }
 
 export default TechnicalSkillsContainer;

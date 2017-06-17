@@ -16,10 +16,24 @@
   margin-left: 0;
 }
 
+#swanson-image {
+  height: 120px;
+}
+
+.swanson-container {
+  background-color: #93CCC6;
+}
+
+#next-button {
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+}
+
 /*NAV CONTAINER*/
 
 .navbar {
-  background-color: #6CBDB5;
+  background-color: #0AABBA;
   position: fixed;
   height: 40px;
   width: 100%;
@@ -74,7 +88,7 @@
   padding-top: 5px;
 }
 
-.connect-container h1, .contact-container h1, .resume-container h1, .project-container h1 {
+.connect-container h1, .contact-container h1, .resume-container h1, .project-container h1, .swanson-container h1 {
   color: white;
   text-align: center;
   font-family: 'Pontano Sans', sans-serif;
@@ -126,7 +140,7 @@ h1 {
 /*PROJECTS CONTAINER*/
 
 .project-container {
-  background-color: #FFEAAD;
+  background-color: #93CCC6;
   margin-left: 0;
   margin-right: 0;
 }
@@ -139,7 +153,7 @@ h1 {
 }
 
 .project-tile {
-  background-color: #FFEAAD;
+  background-color: #93CCC6;
   /*margin-top: 1%;*/
   padding-bottom: 5%;
   width: 0%;
@@ -175,6 +189,8 @@ h1 {
   height: 10%;
   padding: 5px;
   margin-bottom: 2%;
+  border: solid black 1px;
+  background-color: white;
 }
 
 #font-awesome-icon {
@@ -317,12 +333,12 @@ h1 {
   margin-top: 4%;
   margin-bottom: 4%;
   padding: 15px;
-  height: 150px;
+  height: 140px;
 }
 
 .education-container, .profex-container {
-  padding-bottom: 5%;
-}
+/*  padding-bottom: 5%;
+*/}
 
 #up-button {
   display: inline;
